@@ -1,0 +1,26 @@
+
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/InterRegular.ttf"); font-family : "Inter"; font-weight : 400;  }
+
+ @font-face {
+    font-family: 'arboria';
+    src: url('../assets/fonts/Arboria-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'arboriabook';
+    src: url('../assets/fonts/Arboria-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'arboriablack';
+    src: url('../assets/fonts/Arboria-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  
