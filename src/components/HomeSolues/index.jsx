@@ -17,6 +17,14 @@ const HomeSolues = (props) => {
           >
             {props?.nossassolues}
           </Text>
+
+          <Text
+          className="font-arboria -my-8  text-center text-blue_gray_900 w-auto"
+          variant="body3"
+        >
+          {props?.textinho}
+          Utilizamos os melhores ingredientes, dos nacionais aos importados.
+        </Text>
         </div>
         <div className="flex md:flex-col flex-row gap-10 items-center justify-start w-auto md:w-full">
           <Button

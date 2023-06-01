@@ -58,8 +58,8 @@ const HomeEnvases = (props) => {
           className="font-arboria -my-8  text-center text-blue_gray_900 w-auto"
           variant="body3"
         >
-          Utilizamos ingredientes nacionais e importados,
-          com embalagens inovadoras e diversos tipos de finalização.
+          Nossas embalagens são inovadoras e possuímos diversos tipos de finalização.
+
         </Text>
 
         <Slider

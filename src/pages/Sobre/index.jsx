@@ -2,6 +2,9 @@ import React from "react";
 
 import { Img, List, Text } from "components";
 
+import "../../styles/font.css"
+
+
 const SobrePage = () => {
   return (
     <>
@@ -9,59 +12,51 @@ const SobrePage = () => {
         <div className="bg-blue_gray_900 flex flex-col items-center justify-start p-[21px] sm:px-5 w-full">
           <div className="flex flex-col items-center justify-start max-w-[1167px] mb-[25px] mx-auto md:px-5 w-full">
             <div className="flex md:flex-col flex-row gap-[39px] items-center justify-between pl-4 w-full">
-              <div className="flex md:flex-1 flex-col items-center justify-start w-[48%] md:w-full">
-                <div className="md:relative md:bottom-[-40px] flex flex-col gap-6 h-[388px] md:h-auto items-start justify-start md:left-10 sm:left-[-38px] md:pr-10 sm:pr-50 pr-[47px] py-6 md:right-[] md:top-[15%] md:w-[480px] w-[544px] sm:w-full">
-                  <Img
-                    src="images/img_logoprincipallaranja.svg"
-                    className="h-[38px] w-[272px]"
-                    alt="logoprincipalla"
-                  />
-                  <div className="flex flex-col items-start justify-start w-full">
-                    <Text
-                      className="font-medium text-white_A700_02"
-                      as="h2"
-                      variant="h2"
-                    >
-                      A expertise da industria.
-                    </Text>
-                    <div className="font-inter h-[60px] relative w-full">
-                    <div className="absolute bg-deep_orange_A400 h-[60px] inset-y-[0] my-auto left-14 right-auto w-[100%]"></div>
-                      <Text
-                        className="absolute font-normal h-max inset-y-[0] justify-center left-[0] m-auto right-[20%] sm:right-[] text-white_A700_02 w-max"
-                        as="h2"
-                        variant="h2"
-                      >
-                        <span className="md:text-[38px] sm:text-4xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
-                          Na{" "}
-                        </span>
-                        <span className="md:text-[38px] sm:text-4xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
-                          agilidade de uma startup.
-                        </span>
-                      </Text>
-                    </div>
-                  </div>
-                  <Text
-                    className="leading-[33.00px] text-gray_100"
-                    as="h4"
-                    variant="h4"
-                  >
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
-                      A Terceiriza tem vasto conhecimento do ecossistema da
-                      indústria em todos os seus segmentos e{" "}
-                    </span>
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-bold">
-                      conta com um time exemplar
-                    </span>
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
-                      <>
-                        {" "}
-                        para auxiliar a sua empresa desde a concepção até <br />
-                        a entrega do produto final.
-                      </>
-                    </span>
-                  </Text>
-                </div>
-              </div>
+            <div className="flex md:flex-1 flex-col items-center justify-start w-[48%] md:w-full">
+  <div className="md:relative md:bottom-[-40px] flex flex-col gap-6 h-[388px] md:h-auto items-start justify-start md:left-10 sm:left-[-38px] md:pr-10 sm:pr-50 pr-[47px] py-6 md:right-[] md:top-[15%] md:w-[480px] w-[544px] sm:w-full">
+    <Img
+      src="images/img_logoprincipallaranja.svg"
+      className="h-[38px] w-[272px]"
+      alt="logoprincipalla"
+    />
+    <div className="flex flex-col items-start justify-start w-full ">
+    <Text className="font-medium text-white_A700_02 text-xl sm:text-3xl md:text-3xl" as="h2" variant="h2">
+  A expertise da indústria.
+</Text>
+      <div className="font-inter h-[60px] relative w-full">
+        <div className="absolute bg-deep_orange_A400 h-[60px] inset-y-[0] my-auto left-14 right-auto w-[100%] sm:left-12"></div>
+        <Text
+          className="absolute font-normal h-max inset-y-[0] justify-center left-[0] m-auto right-[20%] sm:right-[] text-white_A700_02 w-max text-3xl sm:text-4xl md:text-5xl"
+          as="h2"
+          variant="h2"
+        >
+          <span className="md:text-[38px] sm:text-3xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
+            Na{" "}
+          </span>
+          <span className="md:text-[38px] sm:text-3xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
+            agilidade de uma startup.
+          </span>
+        </Text>
+      </div>
+    </div>
+    <Text className="leading-[33.00px] text-gray_100" as="h4" variant="h4">
+      <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
+        A Terceiriza tem vasto conhecimento do ecossistema da indústria em todos os seus segmentos e{" "}
+      </span>
+      <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-bold">
+        conta com um time exemplar
+      </span>
+      <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
+        <>
+          {" "}
+          para auxiliar a sua empresa desde a concepção até <br />
+          a entrega do produto final.
+        </>
+      </span>
+    </Text>
+  </div>
+</div>
+
               <div className="md:flex md:left-[30%] overflow-x-auto md:relative md:right-[] w-1/2">
                 <div className="h-[535px] sm:hidden md:left-[] relative md:right-[] w-full">
                   <div className="absolute h-[535px] sm:hidden inset-y-[0] my-auto right-[0] w-[81%] sm:w-full">
@@ -93,7 +88,7 @@ const SobrePage = () => {
             <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto">
               <div className="bg-blue_gray_900 border-[3px] border-solid border-white_A700 flex flex-col gap-4 sm:h-40 h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 rounded-[10px] w-full">
                 <Text
-                  className="text-center text-cyan_A400 tracking-[4.00px] w-full"
+                  className="text-center text-cyan_A400 tracking-[4.00px] w-full "
                   as="h3"
                   variant="h3"
                   style={{ fontSize: '36px' }}
@@ -177,85 +172,83 @@ const SobrePage = () => {
                         </Text>
                       </div>
                       <Text
-                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                        className="font-bold text-deep_orange_A400 w-full"
                         as="h5"
                         variant="h5"
                       >
-                        Nossas soluções buscam preservar os recursos naturais e
-                        reduzir impactos ambientais. Com responsabilidade social
-                        e olhar para o futuro, a sustentabilidade é o valor
-                        central da Terceriza.
+                        Sustentabilidade:
+                      </Text>
+                    </div>
+                    <Text
+                      className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                      variant="body3"
+                    >
+                      Nossas soluções buscam preservar os recursos naturais e
+                      reduzir impactos ambientais. Com responsabilidade social e
+                      olhar para o futuro, a sustentabilidade é o valor central
+                      da Terceriza.
+                    </Text>
+                  </div>
+                </div>
+                <List
+                  className="absolute md:bottom-px flex-col sm:gap-5 grid items-center md:left-px top-[282px] md:top-[] w-full"
+                  orientation="vertical"
+                >
+                  <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
+                    <div className="flex flex-col gap-4 items-start justify-start w-full">
+                      <div className="flex flex-col items-start justify-start w-full">
+                        <Text
+                          className="font-bold text-deep_orange_A400 w-full"
+                          as="h5"
+                          variant="h5"
+                        >
+                          Agilidade:
+                        </Text>
+                      </div>
+                      <Text
+                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                        variant="body3"
+                      >
+                        Na Terceriza, a agilidade é parte integrante de nossa
+                        essência. Compreendemos a velocidade das mudanças no
+                        mercado e nos emprenhamos em simplificar o caminho para
+                        que você possa alcançar seus objetivos com mais rapidez.
                       </Text>
                     </div>
                   </div>
-                  <List
-                    className="flex-col sm:gap-5 grid items-center w-full"
-                    orientation="vertical"
-                  >
-                    <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
-                      <div className="flex flex-col gap-4 items-start justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <Text
-                            className="text-deep_orange_A400 w-full"
-                            as="h3"
-                            variant="h3"
-                          >
-                            Agilidade:
-                          </Text>
-                        </div>
+                  <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
+                    <div className="flex flex-col gap-4 items-start justify-start w-full">
+                      <div className="flex flex-col items-start justify-start w-full">
                         <Text
-                          className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                          className="font-bold text-deep_orange_A400 w-full"
                           as="h5"
                           variant="h5"
                         >
-                          Na Terceriza, a agilidade é parte integrante de nossa
-                          essência. Compreendemos a velocidade das mudanças no
-                          mercado e nos emprenhamos em simplificar o caminho
-                          para que você possa alcançar seus objetivos com mais
-                          rapidez.
+                          Transformação:
                         </Text>
                       </div>
+                      <Text
+                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900 sm:w-[180%]"
+                        variant="body3"
+                      >
+                        A Terceriza se compromete a inspirar e motivar mudanças
+                        de alto impacto através de soluções inovadoras e
+                        eficazes. Queremos promover a transformação no segmento
+                        de saudabilidade e wellness.
+                      </Text>
                     </div>
-                    <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
-                      <div className="flex flex-col gap-4 items-start justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <Text
-                            className="text-deep_orange_A400 w-full"
-                            as="h3"
-                            variant="h3"
-                          >
-                            Transformação:
-                          </Text>
-                        </div>
-                        <Text
-                          className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
-                          as="h5"
-                          variant="h5"
-                        >
-                          A Terceriza se compromete a inspirar e motivar
-                          mudanças de alto impacto através de soluções
-                          inovadoras e eficazes. Queremos promover a
-                          transformação no segmento de saudabilidade e wellness.
-                        </Text>
-                      </div>
-                    </div>
-                  </List>
-                </div>
-                <Img
-                  src="images/img_vector.svg"
-                  className="h-[594px] md:hidden"
-                  alt="vector"
-                />
+                  </div>
+                </List>
               </div>
             </div>
             <div
-              className="absolute bg-cover bg-no-repeat flex flex-col h-full inset-[0] items-end justify-center m-auto p-[50px] md:px-10 sm:px-5 w-full"
-              style={{ backgroundImage: "url('images/img_group7.svg')" }}
+              className="absolute bg-cover bg-no-repeat flex flex-col h-full sm:hidden inset-[0] items-end justify-center m-auto p-[98px] md:px-10 sm:px-5 w-full"
+              style={{ backgroundImage: "url('images/img_group71.png')" }}
             >
               <Img
                 src="images/img_capsulagel1.png"
-                className="md:absolute md:bottom-[] h-[589px] md:h-auto sm:hidden my-12 object-cover md:right-0.5 md:top-[1%] w-[38%]"
-                alt="capsulagelOne"
+                className="h-[589px] md:h-auto md:hidden mr-[25px] object-cover w-[41%]"
+                alt="capsulagelone"
               />
             </div>
           </div>

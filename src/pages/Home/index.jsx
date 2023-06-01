@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import {
   Button,
@@ -17,17 +17,46 @@ import data from '../../data/faqdata'
 import Faq from 'react-faq-component';
 
 
+
 const Home1Page = () => {
 
+
+  const scroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+  }
   const styles = {
     // Custom styles for the FAQ component
     // You can adjust these values according to your requirements
     bgColor: 'blue', // Set the background color
-    titleTextColor: 'white', // Set the font color for the question titles
-    rowContentColor: 'black', // Set the font color for the answer content
-    rowTitleColor: 'white', // Set the background color for the question titles
-    arrowColor: 'white', // Set the color of the expand/collapse arrows
-    width: '100%', // Set the width to full width
+    // titleTextColor: 'white', // Set the font color for the question titles
+    // rowContentColor: 'black', // Set the font color for the answer content
+    // rowTitleColor: 'white', // Set the background color for the question titles
+    // arrowColor: 'white', // Set the color of the expand/collapse arrows
+    // width: '100%', // Set the width to full width
+    // /* Frame 30 */
+
+
+    /* Auto layout */
+
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "0px",
+    gap: "16px",
+
+    width: "10000px",
+    height: "782px",
+
+    color: "white",
+    /* Inside auto layout */
+
+    flex: "none",
+    order: "1",
+    flexGrow: "0",
   };
 
   return (
@@ -56,26 +85,26 @@ const Home1Page = () => {
                   </Text>
                 </div>
                 <a href="/contato">
-                <Button
-                  className="cursor-pointer flex items-center justify-center min-w-[308px]"
-                  rightIcon={
-                    <Img
-                      src="images/img_arrowright.svg"
-                      className="mb-px ml-2"
-                      alt="arrow_right"
-                    />
-                  }
-                  shape="CircleBorder28"
-                  size="lg"
-                  variant="OutlineCyanA400"
-                >
-                  <div className="font-normal text-cyan_A400 text-left text-xl tracking-[4.00px]">
-                    Seja um parceiro
-                  </div>
-                </Button>
+                  <Button
+                    className="cursor-pointer flex items-center justify-center min-w-[308px]"
+                    rightIcon={
+                      <Img
+                        src="images/img_arrowright.svg"
+                        className="mb-px ml-2"
+                        alt="arrow_right"
+                      />
+                    }
+                    shape="CircleBorder28"
+                    size="lg"
+                    variant="OutlineCyanA400"
+                  >
+                    <div className="font-normal text-cyan_A400 text-left text-xl tracking-[4.00px]">
+                      Seja um parceiro
+                    </div>
+                  </Button>
                 </a>
               </div>
-              
+
               <Img
                 src="images/img_group1.svg"
                 className="h-[120px] md:ml-[0] ml-[132px]"
@@ -133,9 +162,9 @@ const Home1Page = () => {
               </div>
               <div className="bg-blue_gray_900 flex md:flex-1 mt-5 flex-col gap-6 h-[357px] md:h-auto items-start justify-start sm:px-5 px-8 py-12 rounded-br-[10px] rounded-tr-[10px] w-auto md:w-full">
                 <div className="h-[167px] md:h-[99px] relative w-[542px]  sm:w-full">
-                
+
                   <div className="absolute bg-blue_gray_900 flex flex-col font-arboria h-max inset-[0] items-center justify-end m-auto w-auto">
-                    
+
                     <Text
                       className="md:absolute  leading-[33.00px] max-w-[542px] md:max-w-full text-white_A700 md:top-[1%] sm:top-px tracking-[4.00px]"
                       variant="body1"
@@ -177,29 +206,30 @@ const Home1Page = () => {
 
 
           <HomeCarousel />
+          <div id="Soluções"></div>
 
-
-
-          <HomeSolues
-            className="bg-white_A700 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
-            nossassolues="Nossas Soluções"
-            capsulas="Capsulas"
-            pó="Pó"
-            tabletes="Tabletes"
-            líQuidos="Líquidos"
-            softgel="Softgel"
-            barras="Barras"
-            gomas="Gomas"
-          />
+       
+            <HomeSolues
+              className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
+              nossassolues="Nossas Soluções"
+              capsulas="Capsulas"
+              pó="Pó"
+              tabletes="Tabletes"
+              líQuidos="Líquidos"
+              softgel="Softgel"
+              barras="Barras"
+              gomas="Gomas"
+            />
+        
           <HomeEnvases
             className="bg-gray_100 flex flex-col gap-12 sm:h-[900px] items-center justify-center max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
             envases="Envases"
             utilizamosingre_One="Utilizamos ingredientes nacionais e importados, com embalagens inovadoras e diversos tipos de finalização."
             buttonoutlineve="Eusou um botão"
           />
-          
 
-          <ClientsCarousel/>    
+
+          <ClientsCarousel />
 
           <div className="flex flex-col gap-12 items-center justify-start max-w-[1279px] pb-24 pt-12 md:px-10 sm:px-5 px-[55px] w-full">
             <div className="flex flex-col items-start justify-start w-auto">
@@ -389,26 +419,26 @@ const Home1Page = () => {
                     >
                       Venha fazer parte disso!
                     </Text>
-                    
-                    
-                  <a href="/contato">
-                    <Button
-                      className="absolute cursor-pointer flex sm:hidden items-center justify-center left-[15%] min-w-[308px]"
-                      rightIcon={
-                        <Img
-                          src="images/img_arrowright.svg"
-                          className="mb-px ml-2"
-                          alt="arrow_right"
-                        />
-                      }
-                      shape="CircleBorder28"
-                      size="lg"
-                      variant="OutlineCyanA400"
-                    >
-                      <div className="font-arboria font-normal sm:hidden text-cyan_A400 text-left text-xl tracking-[4.00px]">
-                        Seja um parceiro
-                      </div>
-                    </Button>
+
+
+                    <a href="/contato">
+                      <Button
+                        className="absolute cursor-pointer flex sm:hidden items-center justify-center left-[15%] min-w-[308px]"
+                        rightIcon={
+                          <Img
+                            src="images/img_arrowright.svg"
+                            className="mb-px ml-2"
+                            alt="arrow_right"
+                          />
+                        }
+                        shape="CircleBorder28"
+                        size="lg"
+                        variant="OutlineCyanA400"
+                      >
+                        <div className="font-arboria font-normal sm:hidden text-cyan_A400 text-left text-xl tracking-[4.00px]">
+                          Seja um parceiro
+                        </div>
+                      </Button>
                     </a>
                   </div>
                 </div>
@@ -444,9 +474,12 @@ const Home1Page = () => {
                   />
                 </div>
               </div>
+              <div id="FAQ"></div>
             </div>
           </div>
+
           <div className="bg-blue_gray_900 flex flex-col gap-12 items-center justify-start md:px-10 sm:px-5 px-[55px] py-12 w-auto md:w-full">
+
             <div className="flex flex-col items-start justify-start w-auto">
               <Text
                 className="font-normal text-yellow_700 tracking-[4.00px] w-auto"
@@ -511,10 +544,11 @@ const Home1Page = () => {
                 />
               </div>
             </div>
-            {/* <div id="FAQ" >
-            <Faq data={data} styles={styles}/>
+
+            {/* <div id="FAQ"  >
+              <Faq data={data} styles={styles} />
             </div> */}
-             
+
           </div>
           <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap hidden items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
         </div>
