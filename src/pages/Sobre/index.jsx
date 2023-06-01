@@ -143,15 +143,10 @@ const SobrePage = () => {
               alt="vector"
             />
             <div className="flex flex-col gap-[31px] h-full justify-start sm:m-[] ml-[125px] sm:ml-px mt-[22px] md:relative w-[47%]">
-              <Text
-                className="md:absolute sm:bottom-[] font-bold md:left-[70%] sm:m-[] md:ml-[0] ml-[432px] sm:ml-[] sm:right-[33%] text-deep_orange_A400 md:top-[20%] sm:top-[90px]"
-                as="h3"
-                variant="h3"
-              >
-                Valores
-              </Text>
+             
               <div className="absolute md:bottom-px flex flex-col items-center justify-start md:left-[100px] mr-[69px] md:top-[102px] w-[89%] md:w-full">
                 <div className="absolute bg-white_A700 md:bottom-1/2 sm:bottom-[] flex flex-col items-center justify-start left-px p-6 sm:px-5 rounded shadow-bs top-[100px] sm:top-[] md:top-[] w-[530px] sm:w-full">
+                  
                   <div className="flex flex-col gap-4 items-start justify-start w-full">
                     <div className="flex flex-col items-start justify-start w-full">
                       <Text

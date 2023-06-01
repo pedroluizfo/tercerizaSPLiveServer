@@ -13,11 +13,22 @@ import HomeSolues from "components/HomeSolues";
 import "../../styles/font.css"
 import HomeCarousel from "components/HomeCarousel/HomeCarousel";
 import ClientsCarousel from "components/ClientsCarousel/ClientsCarousel";
-import faq from "react-faq-component"
+import data from '../../data/faqdata'
+import Faq from 'react-faq-component';
 
 
 const Home1Page = () => {
 
+  const styles = {
+    // Custom styles for the FAQ component
+    // You can adjust these values according to your requirements
+    bgColor: 'blue', // Set the background color
+    titleTextColor: 'white', // Set the font color for the question titles
+    rowContentColor: 'black', // Set the font color for the answer content
+    rowTitleColor: 'white', // Set the background color for the question titles
+    arrowColor: 'white', // Set the color of the expand/collapse arrows
+    width: '100%', // Set the width to full width
+  };
 
   return (
     <>
@@ -44,6 +55,7 @@ const Home1Page = () => {
                     </>
                   </Text>
                 </div>
+                <a href="/contato">
                 <Button
                   className="cursor-pointer flex items-center justify-center min-w-[308px]"
                   rightIcon={
@@ -61,7 +73,9 @@ const Home1Page = () => {
                     Seja um parceiro
                   </div>
                 </Button>
+                </a>
               </div>
+              
               <Img
                 src="images/img_group1.svg"
                 className="h-[120px] md:ml-[0] ml-[132px]"
@@ -138,7 +152,7 @@ const Home1Page = () => {
                     Sobre nós
                   </Text>
                 </div>
-                <div className="flex flex-wrap items-center gap-2 mt-3 sm:relative sm:top-[15px] w-auto">
+                <div className="flex flex-wrap items-center gap-2 mt-20 sm:relative sm:top-[15px] w-auto">
                   <a href="/sobre">
                     <Button
                       className="text-cyan_A400 tracking-[4.00px] w-auto"
@@ -154,6 +168,7 @@ const Home1Page = () => {
                   />
                 </div>
               </div>
+
 
             </div>
           </div>
@@ -374,6 +389,9 @@ const Home1Page = () => {
                     >
                       Venha fazer parte disso!
                     </Text>
+                    
+                    
+                  <a href="/contato">
                     <Button
                       className="absolute cursor-pointer flex sm:hidden items-center justify-center left-[15%] min-w-[308px]"
                       rightIcon={
@@ -391,6 +409,7 @@ const Home1Page = () => {
                         Seja um parceiro
                       </div>
                     </Button>
+                    </a>
                   </div>
                 </div>
                 <div className="absolute md:h-[366px] h-[367px] inset-y-[0] my-auto right-[0] w-2/5 sm:w-full">
@@ -492,6 +511,10 @@ const Home1Page = () => {
                 />
               </div>
             </div>
+            {/* <div id="FAQ" >
+            <Faq data={data} styles={styles}/>
+            </div> */}
+             
           </div>
           <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap hidden items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
         </div>
