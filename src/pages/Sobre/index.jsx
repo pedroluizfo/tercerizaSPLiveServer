@@ -2,260 +2,231 @@ import React from "react";
 
 import { Img, List, Text } from "components";
 
+import "../../styles/font.css"
+
+
 const SobrePage = () => {
   return (
     <>
-      <div className="bg-white_A700 flex flex-col font-arboria gap-[34px] items-center justify-start mx-auto pb-20 w-full">
-        <div className="bg-blue_gray_900 flex flex-col items-center justify-start p-[21px] sm:px-5 w-full">
-          <div className="flex flex-col items-center justify-start max-w-[1167px] mb-[25px] mx-auto md:px-5 w-full">
-            <div className="flex md:flex-col flex-row gap-[39px] items-center justify-between pl-4 w-full">
-              <div className="flex md:flex-1 flex-col items-center justify-start w-[48%] md:w-full">
-                <div className="md:relative md:bottom-[-40px] flex flex-col gap-6 h-[388px] md:h-auto items-start justify-start md:left-10 sm:left-[-38px] md:pr-10 sm:pr-50 pr-[47px] py-6 md:right-[] md:top-[15%] md:w-[480px] w-[544px] sm:w-full">
-                  <Img
-                    src="images/img_logoprincipallaranja.svg"
-                    className="h-[38px] w-[272px]"
-                    alt="logoprincipalla"
-                  />
-                  <div className="flex flex-col items-start justify-start w-full">
-                    <Text
-                      className="font-medium text-white_A700_02"
-                      as="h2"
-                      variant="h2"
-                    >
-                      A expertise da industria.
-                    </Text>
-                    <div className="font-inter h-[60px] relative w-full">
-                    <div className="absolute bg-deep_orange_A400 h-[60px] inset-y-[0] my-auto left-14 right-auto w-[100%]"></div>
-                      <Text
-                        className="absolute font-normal h-max inset-y-[0] justify-center left-[0] m-auto right-[20%] sm:right-[] text-white_A700_02 w-max"
-                        as="h2"
-                        variant="h2"
-                      >
-                        <span className="md:text-[38px] sm:text-4xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
-                          Na{" "}
-                        </span>
-                        <span className="md:text-[38px] sm:text-4xl text-white_A700_02 text-[40px] font-arboria text-left font-medium">
-                          agilidade de uma startup.
-                        </span>
-                      </Text>
-                    </div>
-                  </div>
+
+      <div className="bg-white_A700 flex flex-col font-arboria gap-8 items-center justify-end mx-auto pt-[71px] w-full">
+        <div className="sm:absolute h-[535px] sm:hidden md:px-5 relative sm:top-[] sm:w-[] w-full">
+          <div className="absolute bg-blue_gray_900 bottom-[0] h-[507px] sm:hidden inset-x-[0] mx-auto w-full"></div>
+          <div className="absolute flex flex-col h-full sm:hidden inset-[0] items-center justify-center m-auto w-[82%]">
+            <div className="h-[535px] sm:hidden relative w-[1046px] md:w-full">
+              <div className="absolute flex flex-col gap-6 h-max inset-y-[0] items-start justify-start left-[0] my-auto py-6 w-auto">
+                <Img
+                  src="images/img_logoprincipallaranja.svg"
+                  className="h-[38px] w-[272px]"
+                  alt="logoprincipalla"
+                />
+                <div className="flex flex-col items-start justify-start w-[93%] md:w-full">
                   <Text
-                    className="leading-[33.00px] text-gray_100"
+                    
+                    className="font-medium text-white_A700_02"
                     as="h4"
                     variant="h4"
                   >
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
-                      A Terceiriza tem vasto conhecimento do ecossistema da
-                      indústria em todos os seus segmentos e{" "}
-                    </span>
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-bold">
-                      conta com um time exemplar
-                    </span>
-                    <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
-                      <>
-                        {" "}
-                        para auxiliar a sua empresa desde a concepção até <br />
-                        a entrega do produto final.
-                      </>
-                    </span>
+                    A expertise da industria.
+                  </Text>
+                  <div className="font-inter h-[60px] relative right-[100px] w-full">
+                    <div className="absolute bg-deep_orange_A400 h-[60px] inset-y-[0] sm:left-[20%] my-auto right-[0] sm:w-[110%] w-[90%]"></div>
+                    <Text
+                      className="absolute bottom-[0] h-max justify-center left-[0] sm:left-[22%] m-auto md:right-[20%] right-[30%] sm:right-[] text-white_A700_02 w-max "
+                      as="h4"
+                      variant="h4"
+                    >
+                      
+                      <span className="md:text-[38px] sm:text-4xl text-white_A700_02 text-[40px] font-arboria text-left ml-16">
+                        Na agilidade de uma startup.
+                      </span>
+                    </Text>
+                  </div>
+                </div>
+                <Text
+                   className="leading-[33.00px] text-gray_100 relative z-10" 
+                   variant="body1"
+                >
+                  <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
+                    A Terceiriza tem vasto conhecimento do ecossistema <br /> 
+                    da indústria em todos os seus segmentos e conta com um <br />
+                    time exemplar para auxiliar a sua empresa desde a <br />
+                    concepção até a entrega do produto final.
+                  </span>
+                </Text>
+              </div>
+              <div className="absolute sm:flex h-[535px] inset-y-[0] my-auto right-[0] w-[56%] sm:w-full">
+                <div className="absolute h-[535px] sm:hidden inset-y-[0] my-auto right-[2%] w-[79%] sm:w-full">
+                  <div className="absolute bg-yellow_700 h-[385px] sm:hidden inset-y-[0] my-auto right-[0] w-[84%]"></div>
+                  <Img
+                    src="images/img_png11.png"
+                    className="absolute h-[535px] sm:hidden inset-y-[0] left-[0] my-auto object-cover w-[89%]"
+                    alt="pngeleven"
+                  />
+                </div>
+                <Img
+                  src="images/img_frame628103.svg"
+                  className="absolute bottom-[11%] h-[81px] right-[0]"
+                  alt="frame628103"
+                />
+                <Img
+                  src="images/img_frame628103.svg"
+                  className="absolute sm:flex h-[81px] left-[0] top-[20%]"
+                  alt="frame628104"
+                />
+                <div className="absolute bg-cyan_A400 bottom-[5%] h-[26px] left-[18%] rotate-[-180deg] w-[9%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="sm:flex md:h-[1053px] h-[1152px] sm:h-[] sm:p-[] sm:pt-[] md:px-5 relative sm:top-[100px] w-full">
+          <div className="absolute bg-gray_100 bottom-[0] sm:bottom-[] h-[1053px] sm:hidden inset-x-[0] mx-auto sm:top-[] w-[92%]"></div>
+          <div className="absolute flex flex-col inset-x-[0] items-center justify-start mx-auto top-[0] w-auto">
+            <div className="flex flex-col items-start justify-start max-w-[964px] w-full">
+              <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto">
+                <div className="sm:absolute bg-blue_gray_900 border-[3px] border-solid border-white_A700 sm:bottom-[] flex flex-col gap-4 sm:h-[120px] h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 rounded-[10px] sm:top-[-10px] w-full">
+                  <Text
+                    className="font-bold text-center text-cyan_A400 sm:text-xl tracking-[4.00px] w-full"
+                    as="h5"
+                    variant="h5"
+                  >
+                    Propósito
+                  </Text>
+                  <Text
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    variant="body3"
+                  >
+                    Levar inovação e sustentabilidade à indústria de saúde e
+                    bem-estar brasileira.
+                  </Text>
+                </div>
+                <div className="sm:absolute bg-blue_gray_900 border-[3px] border-solid border-white_A700 sm:bottom-px flex flex-col sm:font-fontfamily gap-4 items-center justify-start p-6 sm:px-5 rounded-[10px] sm:text-[] sm:top-[] w-full">
+                  <Text
+                    className="font-bold text-center text-cyan_A400 sm:text-xl tracking-[4.00px] w-full"
+                    as="h5"
+                    variant="h5"
+                  >
+                    Visão
+                  </Text>
+                  <Text
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    variant="body3"
+                  >
+                    Ser líder no desenvolvimento de soluções em saúde e
+                    bem-estar, integrado a ciência e a tecnologia às tendências
+                    do mercado.
+                  </Text>
+                </div>
+                <div className="sm:absolute bg-blue_gray_900 border-[3px] border-solid border-white_A700 md:bottom-[45px] flex flex-col gap-4 sm:h-[110px] h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 md:relative rounded-[10px] sm:top-[100px] md:top-[] w-full">
+                  <Text
+                    className="font-bold text-center text-cyan_A400 sm:text-xl tracking-[4.00px] w-full"
+                    as="h5"
+                    variant="h5"
+                  >
+                    Missão
+                  </Text>
+                  <Text
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    variant="body3"
+                  >
+                    Apoiar o desenvolvimento de produtos de saúde e bem-estar,
+                    com foco em inovação e sustentabilidade.
                   </Text>
                 </div>
               </div>
-              <div className="md:flex md:left-[30%] overflow-x-auto md:relative md:right-[] w-1/2">
-                <div className="h-[535px] sm:hidden md:left-[] relative md:right-[] w-full">
-                  <div className="absolute h-[535px] sm:hidden inset-y-[0] my-auto right-[0] w-[81%] sm:w-full">
-                    <div className="absolute bg-yellow_700 h-[385px] sm:hidden inset-y-[0] my-auto right-[0] w-[84%]"></div>
-                    <Img
-                      src="images/img_png11.png"
-                      className="absolute h-[535px] sm:hidden inset-y-[0] left-[0] my-auto object-cover w-[89%]"
-                      alt="pngEleven"
-                    />
+            </div>
+          </div>
+          <div className="absolute bottom-[8%] sm:bottom-[] sm:flex md:h-[785px] h-[788px] inset-x-[0] mx-auto sm:top-[130px] sm:w-3/5 w-full">
+            <Img
+              src="images/img_vector.png"
+              className="absolute bottom-[9%] h-[594px] md:hidden object-cover right-[0]"
+              alt="vector"
+            />
+            <div className="flex flex-col gap-[31px] h-full justify-start sm:m-[] ml-[125px] sm:ml-px mt-[22px] md:relative w-[47%]">
+             
+              <div className="absolute md:bottom-px flex flex-col items-center justify-start md:left-[100px] mr-[69px] md:top-[102px] w-[89%] md:w-full">
+                <div className="absolute bg-white_A700 md:bottom-1/2 sm:bottom-[] flex flex-col items-center justify-start left-px p-6 sm:px-5 rounded shadow-bs top-[100px] sm:top-[] md:top-[] w-[530px] sm:w-full">
+                  
+                  <div className="flex flex-col gap-4 items-start justify-start w-full">
+                    <div className="flex flex-col items-start justify-start w-full">
+                      <Text
+                        className="font-bold text-deep_orange_A400 w-full"
+                        as="h5"
+                        variant="h5"
+                      >
+                        Sustentabilidade:
+                      </Text>
+                    </div>
+                    <Text
+                      className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                      variant="body3"
+                    >
+                      Nossas soluções buscam preservar os recursos naturais e
+                      reduzir impactos ambientais. Com responsabilidade social e
+                      olhar para o futuro, a sustentabilidade é o valor central
+                      da Terceriza.
+                    </Text>
                   </div>
-                  <Img
-                    src="images/img_frame628103.svg"
-                    className="absolute bottom-[8%] h-[81px] sm:hidden right-[0]"
-                    alt="frame628103"
-                  />
-                  <Img
-                    src="images/img_frame628103.svg"
-                    className="absolute h-[81px] sm:hidden left-[0] top-[13%]"
-                    alt="frame628104"
-                  />
-                  <div className="absolute bg-cyan_A400 bottom-[1%] h-[26px] sm:hidden left-[11%] rotate-[-180deg] w-[9%]"></div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-start max-w-[964px] mx-auto md:px-5 w-full">
-          <div className="flex flex-col items-start justify-start max-w-[964px] w-full">
-            <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto">
-              <div className="bg-blue_gray_900 border-[3px] border-solid border-white_A700 flex flex-col gap-4 sm:h-40 h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 rounded-[10px] w-full">
-                <Text
-                  className="text-center text-cyan_A400 tracking-[4.00px] w-full"
-                  as="h3"
-                  variant="h3"
-                  style={{ fontSize: '36px' }}
+                <List
+                  className="absolute md:bottom-px flex-col sm:gap-5 grid items-center md:left-px top-[282px] md:top-[] w-full"
+                  orientation="vertical"
                 >
-                  Propósito
-                </Text>
-                <Text
-                  className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700"
-                  as="h5"
-                  variant="h5"
-                  style={{ fontSize: '20px' }}
-                >
-                  Levar inovação e sustentabilidade à indústria de saúde e
-                  bem-estar brasileira.
-                </Text>
-              </div>
-              <div className="bg-blue_gray_900 border-[3px] border-solid border-white_A700 flex flex-col gap-4 md:h-40 h-[241px] items-center justify-start p-6 sm:px-5 rounded-[10px] w-full">
-                <Text
-                  className="text-center text-cyan_A400 tracking-[4.00px] w-full"
-                  as="h3"
-                  variant="h3"
-                  style={{ fontSize: '36px' }}
-
-                >
-                  Visão
-                </Text>
-                <Text
-                  className="leading-[27.00px] sm:m-[] md:m-[] max-w-[252px] md:max-w-full md:mb-[] md:mt-[-10px] text-center text-white_A700 mt-[-10px]"
-                  as="h5"
-                  variant="h5"
-                  style={{ fontSize: '20px' }}
-                >
-                  Ser líder no desenvolvimento de soluções em saúde e bem-estar,
-                  integrado a ciência e a tecnologia às tendências do mercado.
-                </Text>
-              </div>
-              <div className="bg-blue_gray_900 border-[3px] border-solid border-white_A700 flex flex-col gap-4 sm:h-40 h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 rounded-[10px] w-full">
-                <Text
-                  className="text-center text-cyan_A400 tracking-[4.00px] w-full"
-                  as="h3"
-                  variant="h3"
-                  style={{ fontSize: '36px' }}
-
-                >
-                  Missão
-                </Text>
-                <Text
-                  className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700"
-                  as="h5"
-                  variant="h5"
-                  style={{ fontSize: '20px' }}
-                >
-                  Apoiar o desenvolvimento de produtos de saúde e bem-estar, com
-                  foco em inovação e sustentabilidade.
-                </Text>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-start w-full">
-          <div className="sm:h-[785px] h-[788px] md:h-[957px] md:px-5 relative w-full">
-            <div className="flex flex-col gap-8 h-full justify-start ml-auto mr-8 mt-[22px] w-[87%]">
-              <Text
-                className="md:ml-[0] ml-[434px] text-deep_orange_A400"
-                as="h1"
-                variant="h1"
-              >
-                Valores
-              </Text>
-              <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between w-full">
-                <div className="md:absolute flex flex-col items-center justify-start md:left-[10%] md:right-[]">
-                  <div className="bg-white_A700 flex flex-col items-center justify-start p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
+                  <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
                     <div className="flex flex-col gap-4 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start w-full">
                         <Text
-                          className="text-deep_orange_A400 w-full"
-                          as="h3"
-                          variant="h3"
+                          className="font-bold text-deep_orange_A400 w-full"
+                          as="h5"
+                          variant="h5"
                         >
-                          Sustentabilidade:
+                          Agilidade:
                         </Text>
                       </div>
                       <Text
                         className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
-                        as="h5"
-                        variant="h5"
+                        variant="body3"
                       >
-                        Nossas soluções buscam preservar os recursos naturais e
-                        reduzir impactos ambientais. Com responsabilidade social
-                        e olhar para o futuro, a sustentabilidade é o valor
-                        central da Terceriza.
+                        Na Terceriza, a agilidade é parte integrante de nossa
+                        essência. Compreendemos a velocidade das mudanças no
+                        mercado e nos emprenhamos em simplificar o caminho para
+                        que você possa alcançar seus objetivos com mais rapidez.
                       </Text>
                     </div>
                   </div>
-                  <List
-                    className="flex-col sm:gap-5 grid items-center w-full"
-                    orientation="vertical"
-                  >
-                    <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
-                      <div className="flex flex-col gap-4 items-start justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <Text
-                            className="text-deep_orange_A400 w-full"
-                            as="h3"
-                            variant="h3"
-                          >
-                            Agilidade:
-                          </Text>
-                        </div>
+                  <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
+                    <div className="flex flex-col gap-4 items-start justify-start w-full">
+                      <div className="flex flex-col items-start justify-start w-full">
                         <Text
-                          className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                          className="font-bold text-deep_orange_A400 w-full"
                           as="h5"
                           variant="h5"
                         >
-                          Na Terceriza, a agilidade é parte integrante de nossa
-                          essência. Compreendemos a velocidade das mudanças no
-                          mercado e nos emprenhamos em simplificar o caminho
-                          para que você possa alcançar seus objetivos com mais
-                          rapidez.
+                          Transformação:
                         </Text>
                       </div>
+                      <Text
+                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900 sm:w-[180%]"
+                        variant="body3"
+                      >
+                        A Terceriza se compromete a inspirar e motivar mudanças
+                        de alto impacto através de soluções inovadoras e
+                        eficazes. Queremos promover a transformação no segmento
+                        de saudabilidade e wellness.
+                      </Text>
                     </div>
-                    <div className="bg-white_A700 flex sm:flex-1 flex-col items-center justify-start my-0 p-6 sm:px-5 rounded shadow-bs w-[530px] sm:w-full">
-                      <div className="flex flex-col gap-4 items-start justify-start w-full">
-                        <div className="flex flex-col items-start justify-start w-full">
-                          <Text
-                            className="text-deep_orange_A400 w-full"
-                            as="h3"
-                            variant="h3"
-                          >
-                            Transformação:
-                          </Text>
-                        </div>
-                        <Text
-                          className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
-                          as="h5"
-                          variant="h5"
-                        >
-                          A Terceriza se compromete a inspirar e motivar
-                          mudanças de alto impacto através de soluções
-                          inovadoras e eficazes. Queremos promover a
-                          transformação no segmento de saudabilidade e wellness.
-                        </Text>
-                      </div>
-                    </div>
-                  </List>
-                </div>
-                <Img
-                  src="images/img_vector.svg"
-                  className="h-[594px] md:hidden"
-                  alt="vector"
-                />
+                  </div>
+                </List>
               </div>
             </div>
             <div
-              className="absolute bg-cover bg-no-repeat flex flex-col h-full inset-[0] items-end justify-center m-auto p-[50px] md:px-10 sm:px-5 w-full"
-              style={{ backgroundImage: "url('images/img_group7.svg')" }}
+              className="absolute bg-cover bg-no-repeat flex flex-col h-full sm:hidden inset-[0] items-end justify-center m-auto p-[98px] md:px-10 sm:px-5 w-full"
+              style={{ backgroundImage: "url('images/img_group71.png')" }}
             >
               <Img
                 src="images/img_capsulagel1.png"
-                className="md:absolute md:bottom-[] h-[589px] md:h-auto sm:hidden my-12 object-cover md:right-0.5 md:top-[1%] w-[38%]"
-                alt="capsulagelOne"
+                className="h-[589px] md:h-auto md:hidden mr-[25px] object-cover w-[41%]"
+                alt="capsulagelone"
               />
             </div>
           </div>

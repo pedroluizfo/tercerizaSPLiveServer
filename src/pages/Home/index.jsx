@@ -55,6 +55,7 @@ const Home1Page = () => {
                     </>
                   </Text>
                 </div>
+                <a href="/contato">
                 <Button
                   className="cursor-pointer flex items-center justify-center min-w-[308px]"
                   rightIcon={
@@ -72,7 +73,9 @@ const Home1Page = () => {
                     Seja um parceiro
                   </div>
                 </Button>
+                </a>
               </div>
+              
               <Img
                 src="images/img_group1.svg"
                 className="h-[120px] md:ml-[0] ml-[132px]"
@@ -386,6 +389,9 @@ const Home1Page = () => {
                     >
                       Venha fazer parte disso!
                     </Text>
+                    
+                    
+                  <a href="/contato">
                     <Button
                       className="absolute cursor-pointer flex sm:hidden items-center justify-center left-[15%] min-w-[308px]"
                       rightIcon={
@@ -403,6 +409,7 @@ const Home1Page = () => {
                         Seja um parceiro
                       </div>
                     </Button>
+                    </a>
                   </div>
                 </div>
                 <div className="absolute md:h-[366px] h-[367px] inset-y-[0] my-auto right-[0] w-2/5 sm:w-full">
@@ -504,9 +511,9 @@ const Home1Page = () => {
                 />
               </div>
             </div>
-            <div id="FAQ" >
+            {/* <div id="FAQ" >
             <Faq data={data} styles={styles}/>
-            </div>
+            </div> */}
              
           </div>
           <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap hidden items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
