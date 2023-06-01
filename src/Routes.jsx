@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 const Termosdeuso = React.lazy(() => import("pages/Termosdeuso"));
 const Home1 = React.lazy(() => import("pages/Home1"));
