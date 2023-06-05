@@ -50,13 +50,7 @@ const ClientsCarousel = () => {
           >
             Nossos Clientes
           </Text>
-          <Text
-            className="font-arboria text-center text-white_A700 w-auto"
-            variant="body3"
-          >
-            Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit
-            amet consectetur.
-          </Text>
+          
         </div>
 
         <Slider
