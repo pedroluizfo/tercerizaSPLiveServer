@@ -75,13 +75,7 @@ const HomeCarousel = () => {
           >
             Etapas
           </Text>
-          <Text
-            className="font-arboria text-center text-white_A700 w-auto"
-            variant="body3"
-          >
-            Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit
-            amet consectetur.
-          </Text>
+         
         </div>
 
         <div className="flex flex-col gap-6 items-center justify-start max-w-[1140px] mx-auto w-full">
@@ -102,7 +96,7 @@ const HomeCarousel = () => {
                 <div className="flex flex-col items-center justify-start mx-2.5">
                   <div className="flex md:flex-col flex-row gap-8 items-center justify-center w-full">
                     <div className="flex flex-1 flex-col items-start justify-start max-w-[964px] w-full">
-                      <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto h-[350px]">
+                      <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto mh-[350px]">
                         {boards
                           .slice(index * 3, index * 3 + 3)
                           .map((board, i) => (

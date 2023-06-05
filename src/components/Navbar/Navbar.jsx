@@ -9,8 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import logo from "../../assets/images/REDUZIDA_LARANJA 1.png";
-
+import logo from "../../assets/images/img_logoreduzida.svg";
+import { useMediaQuery } from '@mui/material';
 import "../../styles/font.css";
 
 const pages = [
@@ -53,11 +53,22 @@ function Navbar() {
     }
   };
 
+  // Use useMediaQuery to check for mobile mode
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: '#293335' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={logo} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img
+            src={logo}
+            style={{
+              display: 'flex',
+              marginRight: '1rem',
+              width: '50px', 
+              height: 'auto' 
+            }}
+          />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -111,7 +122,11 @@ function Navbar() {
                 >
                   <Typography
                     textAlign="center"
-                    sx={{ fontFamily: 'arboria', fontSize: 'inherit', color: '#FFFFFF' }}
+                    sx={{
+                      fontFamily: 'arboria',
+                      fontSize: 'inherit',
+                      color: isMobile ? '#293335' : '#FFFFFF', // Change the color based on mobile mode
+                    }}
                   >
                     {page.name}
                   </Typography>

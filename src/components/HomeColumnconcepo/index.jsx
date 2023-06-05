@@ -1,9 +1,6 @@
 import React from "react";
-
 import { Text } from "components";
-
-import "../../styles/font.css"
-
+import "../../styles/font.css";
 
 const HomeColumnconcepo = (props) => {
   return (
@@ -29,15 +26,11 @@ const HomeColumnconcepo = (props) => {
           <Text
             className="font-arboria leading-[27.00px] text-center text-white_A700 w-full"
             variant="body3"
+            style={{ minHeight: "180px" }} // Adjust the minimum height as needed
           >
             {props?.loremipsumdolor_One}
           </Text>
-          <Text
-            className="font-arboria leading-[27.00px] text-center text-white_A700 w-full"
-            variant="body3"
-          >
-            {props?.loremipsumdolor_Three}
-          </Text>
+          
         </div>
       </div>
     </>

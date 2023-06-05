@@ -22,5 +22,9 @@
     font-style: normal;
   }
 
+  .zoom-page {
+    zoom: 120%; /* Adjust the zoom level as per your requirement */
+  }
+
 
   
