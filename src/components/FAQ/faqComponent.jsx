@@ -1,5 +1,4 @@
 import {
-    Button,
     Img,
     Line,
     Text,
@@ -10,9 +9,7 @@ import { useFaqData } from "../../context/FaqContext";
 
 const FaqComponent = ({ faqProps }) => {
     const { faqData, setFaqData } = useFaqData();
-    const isClosed = faqData;
-    const [faqOpen, setFaqOpen] = useState(false);
-
+   
     const handleFaqOpen = () => {
         setFaqData(true);
     };

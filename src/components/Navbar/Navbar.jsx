@@ -10,8 +10,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from "../../assets/images/img_logoreduzida.svg";
-import { useMediaQuery } from '@mui/material';
+
 import "../../styles/font.css";
+
 
 const pages = [
   { name: 'Home', url: '/' },
@@ -24,7 +25,7 @@ const pages = [
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [currentPath, setCurrentPath] = React.useState('');
-  
+
   React.useEffect(() => {
     const currentPath = window.location.pathname;
     setCurrentPath(currentPath);
@@ -53,9 +54,6 @@ function Navbar() {
     }
   };
 
-  // Use useMediaQuery to check for mobile mode
-  const isMobile = useMediaQuery('(max-width:600px)');
-
   return (
     <AppBar position="fixed" sx={{ backgroundColor: '#293335' }}>
       <Container maxWidth="xl">
@@ -65,8 +63,8 @@ function Navbar() {
             style={{
               display: 'flex',
               marginRight: '1rem',
-              width: '50px', 
-              height: 'auto' 
+              width: '50px', // Adjust the width as per your requirement
+              height: 'auto' // Maintain the aspect ratio by setting height to 'auto'
             }}
           />
 
@@ -122,11 +120,7 @@ function Navbar() {
                 >
                   <Typography
                     textAlign="center"
-                    sx={{
-                      fontFamily: 'arboria',
-                      fontSize: 'inherit',
-                      color: isMobile ? '#293335' : '#FFFFFF', // Change the color based on mobile mode
-                    }}
+                    sx={{ fontFamily: 'arboria', fontSize: 'inherit' }}
                   >
                     {page.name}
                   </Typography>

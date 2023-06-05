@@ -10,21 +10,13 @@ const HomeSolues = (props) => {
     <>
       <div className={props.className}>
         <div className="flex flex-col items-center justify-start w-auto sm:w-full">
-        <Text
-          className="font-arboria text-deep_orange_A400 tracking-[4.00px] w-auto"
-          as="h3"
-          variant="h3"
-        >
+          <Text
+            className="font-arboria text-deep_orange_A400 tracking-[4.00px] w-auto"
+            as="h3"
+            variant="h3"
+          >
             {props?.nossassolues}
           </Text>
-          <div className="mt-4">
-          <Text
-          className="font-arboria text-center text-blue_gray_900 w-auto"
-          variant="body3"
-        >
-          Utilizamos os melhores ingredientes, dos nacionais aos importados.
-        </Text>
-        </div>
         </div>
         <div className="flex md:flex-col flex-row gap-10 items-center justify-start w-auto md:w-full">
           <Button
