@@ -4,6 +4,8 @@ import { Img } from "components";
 import ContatoForm from "components/ContatoForm";
 import Footer1280Px from "components/Footer1280Px/Footer1280Px";
 import "../../styles/font.css"
+import HomeFooter1280px from "components/HomeFooter1280px";
+
 
 
 const ContatoPage = () => {
@@ -32,7 +34,7 @@ const ContatoPage = () => {
           <div className="bg-white_A700 flex flex-col font-arboria items-center justify-end mx-auto pt-[76px] w-full">
             <div className="md:h-[674px] h-[754px] pl-[55px] md:px-5 relative md:right-[100px] w-[1280px] md:w-[39%] sm:w-full">
               <ContatoForm
-                className="absolute bg-white_A700 flex flex-col gap-4 items-center justify-start md:left-[200px] left-[4%] sm:p-6 sm:px-0 md:relative sm:right-[] md:right-[] top-[2%] sm:top-[] md:top-[] w-[538px] sm:w-full"
+                className="absolute bg-white_A700 flex flex-col gap-4 items-center justify-start md:left-[200px] left-[4%] sm:p-6 sm:px-0 md:relative sm:right-[] md:right-[] top-[2%] sm:top-[] md:top-[] w-[500px] sm:w-full"
                 sejaparceiro="Seja parceiro!"
                 nome="Nome:"
                 email="E-mail:"
@@ -118,7 +120,7 @@ const ContatoPage = () => {
               />
               
             </div>
-            <div className="mt-10"><Footer1280Px/></div>
+            <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
           </>
         }
   

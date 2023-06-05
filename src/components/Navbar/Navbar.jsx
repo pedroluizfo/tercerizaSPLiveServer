@@ -23,13 +23,11 @@ const pages = [
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [currentPath,setCurrentPath] = React.useState('');
+  const [currentPath, setCurrentPath] = React.useState('');
+  
   React.useEffect(() => {
-
     const currentPath = window.location.pathname;
     setCurrentPath(currentPath);
-  
-    // Faça algo com o caminho atual, como destacar o item correspondente na barra de navegação
   }, []);
 
   const scroll = (id) => {
@@ -37,8 +35,8 @@ function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
 
-  }
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -47,16 +45,12 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  const handleButtonClick = (url,scrol) => {
-    if(currentPath != url){
-                   
-      window.location.href = url
-     
-    }else{ 
-
+  const handleButtonClick = (url, scrol) => {
+    if (currentPath !== url) {
+      window.location.href = url;
+    } else {
       scroll(scrol);
     }
-   
   };
 
   return (
@@ -95,47 +89,29 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={(() => {
-                  switch (page.name) {
-
-                    case "Home":
-                      window.location.href = page.url
-                      break;
-                    case "Sobre Nós":
-                      window.location.href = page.url
-                      break;
-                    case "Soluções":
-                      if(currentPath != page.url){
-                   
-                        window.location.href = page.url
-                       
-                      }else{ 
-
-                        scroll(page.name);
-                      }
-                     
-                      
-                      break;
-                    case "FAQ":
-                      if(currentPath != page.url){
-                        window.location.href = page.url
-                    
-                      }else{ 
-
-                        scroll(page.name);
-                      }
-                      break;
-
-                    case "Seja Um Parceiro":
-                      window.location.href = page.url
-                      break;
-                  }
-
-
-                })}>
+                <MenuItem
+                  key={page.name}
+                  onClick={() => {
+                    switch (page.name) {
+                      case 'Home':
+                      case 'Sobre Nós':
+                      case 'Seja Um Parceiro':
+                        window.location.href = page.url;
+                        break;
+                      case 'Soluções':
+                      case 'FAQ':
+                        if (currentPath !== page.url) {
+                          window.location.href = page.url;
+                        } else {
+                          scroll(page.name);
+                        }
+                        break;
+                    }
+                  }}
+                >
                   <Typography
                     textAlign="center"
-                    sx={{ fontFamily: 'arboria', fontSize: 'inherit' }} // Apply the custom font
+                    sx={{ fontFamily: 'arboria', fontSize: 'inherit', color: '#FFFFFF' }}
                   >
                     {page.name}
                   </Typography>
@@ -148,14 +124,13 @@ function Navbar() {
             {pages.map((page, index) => (
               <Button
                 key={page.name}
-                onClick={() => handleButtonClick(page.url,page.name)}
+                onClick={() => handleButtonClick(page.url, page.name)}
                 sx={{
                   my: 2,
-                  color: '#00F7ED',
+                  color: page.name === 'Seja Um Parceiro' ? '#00F7ED' : '#FFFFFF',
                   display: 'block',
-                  fontFamily: 'arboria', // Apply the custom font
+                  fontFamily: 'arboria',
                   ...(index === pages.length - 1 && {
-                    // Apply the custom CSS to the last button
                     boxSizing: 'border-box',
                     display: 'flex',
                     flexDirection: 'row',

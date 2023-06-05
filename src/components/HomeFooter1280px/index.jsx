@@ -4,6 +4,10 @@ import { Button, Img } from "components";
 
 import "../../styles/font.css"
 
+function handleClick() {
+  window.open('https://www.instagram.com/terceiriza_sp/', '_blank');
+}
+
 
 const HomeFooter1280px = (props) => {
   return (
@@ -14,7 +18,7 @@ const HomeFooter1280px = (props) => {
           className="h-6 w-[157px]"
           alt="logoprincipalla_One"
         />
-        <div className="flex flex-row gap-4 items-start justify-start w-auto">
+        <div className="flex flex-row gap-4 items-start justify-end w-auto">
           <Button
             className="flex h-6 items-center justify-center rounded-[50%] w-6"
             size="smIcn"
@@ -23,6 +27,7 @@ const HomeFooter1280px = (props) => {
             <Img src="images/img_facebook.svg" className="h-3" alt="facebook" />
           </Button>
           <Button
+            onClick={handleClick}
             className="flex h-6 items-center justify-center rounded-[50%] w-6"
             size="smIcn"
             variant="icbOutlineWhiteA700"

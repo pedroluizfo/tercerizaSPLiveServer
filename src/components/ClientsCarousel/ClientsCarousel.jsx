@@ -41,7 +41,7 @@ const ClientsCarousel = () => {
 
   return (
     <>
-      <div className="flex flex-col md:gap-10 gap-20 items-center justify-start max-w-[1271px] mx-auto md:px-5 py-12 w-full">
+      <div className="flex flex-col md:gap-10 gap-20 items-center justify-center max-w-[1271px] mx-auto md:px-5 py-12 w-full">
         <div className="flex flex-col gap-2 items-center justify-start w-auto md:w-full">
           <Text
             className="font-arboria font-normal text-center text-yellow_700 tracking-[4.00px] w-auto"
@@ -97,7 +97,7 @@ const ClientsCarousel = () => {
           }}
         />
       </div>
-
+        
       <PagerIndicator
         className="flex gap-2 h-4 items-start justify-start w-28"
         count={clientList.length}
@@ -108,6 +108,7 @@ const ClientsCarousel = () => {
         selectedWrapperCss="inline-block"
         unselectedWrapperCss="inline-block"
       />
+      
     </>
   );
 };

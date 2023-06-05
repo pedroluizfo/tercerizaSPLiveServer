@@ -7,16 +7,31 @@ import {
   Text,
 } from "components";
 import HomeColumnfour from "components/HomeColumnfour";
+import { FaqProvider } from "context/FaqContext";
 import HomeEnvases from "components/HomeEnvases";
 import HomeFooter1280px from "components/HomeFooter1280px";
 import HomeSolues from "components/HomeSolues";
 import "../../styles/font.css"
 import HomeCarousel from "components/HomeCarousel/HomeCarousel";
 import ClientsCarousel from "components/ClientsCarousel/ClientsCarousel";
-import data from '../../data/faqdata'
-import Faq from 'react-faq-component';
 
+import FaqComponent from "components/FAQ/faqComponent";
 
+const faqProps = [
+
+  {
+    title: "Como posso atualizar minhas informações de pagamento?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+    },
+    {
+    title: "Quais são os requisitos para solicitar um visto de trabalho?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+    },
+    {
+    title: "Como faço para acompanhar o status do meu pedido?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+    }
+]
 
 const Home1Page = () => {
 
@@ -210,7 +225,7 @@ const Home1Page = () => {
 
        
             <HomeSolues
-              className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
+              className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
               nossassolues="Nossas Soluções"
               capsulas="Capsulas"
               pó="Pó"
@@ -219,6 +234,7 @@ const Home1Page = () => {
               softgel="Softgel"
               barras="Barras"
               gomas="Gomas"
+              
             />
         
           <HomeEnvases
@@ -249,7 +265,7 @@ const Home1Page = () => {
                     <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
                   </div>
                   <Img
-                    src="images/img_rectangle7_259x221.png"
+                    src="images/BrunoLadeira.jpg"
                     className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
@@ -303,7 +319,7 @@ const Home1Page = () => {
                     <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
                   </div>
                   <Img
-                    src="images/img_rectangle7_259x221.png"
+                    src="images/ErickAndrade.jpg"
                     className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
@@ -384,7 +400,7 @@ const Home1Page = () => {
                     <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
                   </div>
                   <Img
-                    src="images/img_rectangle7_259x221.png"
+                    src="images/GabrielNaves.jpg"
                     className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
@@ -489,68 +505,23 @@ const Home1Page = () => {
                 FAQ
               </Text>
             </div>
-            <faq></faq>
-            <div className="flex flex-col font-arboria gap-4 items-center justify-start max-w-[1170px] mx-auto w-full">
-              <HomeColumnfour
-                className="bg-blue_gray_900 flex flex-col gap-4 items-start justify-start max-w-[1170px] w-full"
-                comopossomecert="Quem faz o regulatório dos produtos?"
-                description="Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-                description_One="Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-              />
-              <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[52%]" />
-              <div className="bg-blue_gray_900 flex sm:flex-col flex-row gap-4 items-start justify-start max-w-[1170px] sm:px-5 px-8 py-4 w-full">
-                <Text className="text-white_A700 w-auto" as="h6" variant="h6">
-                  Preciso me preocupar com marca ou patente?
-                </Text>
-                <Img
-                  src="images/img_chevronright_white_a700.svg"
-                  className="h-12 w-12"
-                  alt="chevronrightone"
-                />
-              </div>
-              <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[52%]" />
-              <div className="bg-blue_gray_900 flex md:flex-col flex-row gap-4 items-start justify-start max-w-[1170px] sm:px-5 px-8 py-4 w-full">
-                <Text className="text-white_A700 w-auto" as="h6" variant="h6">
-                  Como posso me certificar que meu produto tem os melhores
-                  ingredientes?
-                </Text>
-                <Img
-                  src="images/img_chevronright_white_a700.svg"
-                  className="h-12 w-12"
-                  alt="chevronrighttwo"
-                />
-              </div>
-              <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[52%]" />
-              <div className="bg-blue_gray_900 flex md:flex-col flex-row gap-4 items-start justify-start max-w-[1170px] sm:px-5 px-8 py-4 w-full">
-                <Text className="text-white_A700 w-auto" as="h6" variant="h6">
-                  Qual é a empresa que fornecerá os ingredientes e fará a
-                  formulação dos meus produtos?
-                </Text>
-                <Img
-                  src="images/img_chevronright_white_a700.svg"
-                  className="h-12 w-12"
-                  alt="chevronrightthr"
-                />
-              </div>
-              <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[52%]" />
-              <div className="bg-blue_gray_900 flex md:flex-col flex-row gap-4 items-start justify-start max-w-[1170px] sm:px-5 px-8 py-4 w-full">
-                <Text className="text-white_A700 w-auto" as="h6" variant="h6">
-                  A terceiriza faz a logística de entrega do produto?
-                </Text>
-                <Img
-                  src="images/img_chevronright_white_a700.svg"
-                  className="h-12 w-12"
-                  alt="chevronrightfou"
-                />
-              </div>
-            </div>
+           
+           
+            {faqProps.map((faq)=>
+               <FaqProvider>
+              <FaqComponent faqProps={faq}/>
+              </FaqProvider>
+             
+            
+            )}
+             
 
             {/* <div id="FAQ"  >
               <Faq data={data} styles={styles} />
             </div> */}
 
           </div>
-          <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap hidden items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
+          <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
         </div>
       </div>
     </>
