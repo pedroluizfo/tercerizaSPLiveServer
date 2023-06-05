@@ -20,17 +20,25 @@ import FaqComponent from "components/FAQ/faqComponent";
 const faqProps = [
 
   {
-    title: "Como posso atualizar minhas informações de pagamento?",
+    title: "Quem faz o regulatório dos produtos?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
     },
     {
-    title: "Quais são os requisitos para solicitar um visto de trabalho?",
+    title: "Preciso me preocupar com marca/patente?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
     },
     {
-    title: "Como faço para acompanhar o status do meu pedido?",
+    title: "Como posso me certificar que meu produto tem os melhores ingredientes?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    }
+    },
+    {
+      title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
+      description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+      },
+      {
+        title: "A Terceiriza faz a logística de entrega do produto?",
+        description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+        }
 ]
 
 const Home1Page = () => {
@@ -281,7 +289,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    CEO
                   </Text>
                 </div>
               </div>
@@ -308,7 +316,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    CEO
                   </Text>
                 </div>
               </div>
@@ -335,7 +343,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    Engenheiro Químico
                   </Text>
                 </div>
               </div>
@@ -362,7 +370,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    Diretor Financeiro
                   </Text>
                 </div>
               </div>
@@ -389,7 +397,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    Coordenadora De Marketing
                   </Text>
                 </div>
               </div>
@@ -416,7 +424,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    Lorem ipsum
+                    Analista De Negócios
                   </Text>
                 </div>
               </div>
