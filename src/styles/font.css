@@ -24,7 +24,10 @@
 
 
   .zoom-page {
-    zoom: 120%; 
+    zoom: 112%; 
+  }
+  .zoom-default {
+    zoom: 100%; 
   }
 
 

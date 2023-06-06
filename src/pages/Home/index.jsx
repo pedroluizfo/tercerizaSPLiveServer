@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Button,
@@ -22,27 +22,47 @@ const faqProps = [
   {
     title: "Quem faz o regulatório dos produtos?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
+  },
+  {
     title: "Preciso me preocupar com marca/patente?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
+  },
+  {
     title: "Como posso me certificar que meu produto tem os melhores ingredientes?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
-      title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
-      description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-      },
-      {
-        title: "A Terceiriza faz a logística de entrega do produto?",
-        description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-        }
+  },
+  {
+    title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+  },
+  {
+    title: "A Terceiriza faz a logística de entrega do produto?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+  }
 ]
 
 const Home1Page = () => {
+  const [mobile, setMobile] = useState(false)
+  const [mainClassName,setClassName] = useState('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
+  
+  const handleResize = () => {
+    setMobile(window.innerWidth < 800);
+    if(mobile){
+      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full')
+    }else{
+      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
+    }
+  };
 
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const scroll = (id) => {
     const element = document.getElementById(id);
@@ -84,7 +104,7 @@ const Home1Page = () => {
 
   return (
     <>
-      <div className="bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full zoom-page">
+      <div className={mainClassName}>
         <div className="flex flex-col items-center justify-start mt-8 w-auto md:w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-20 h-[784px] md:h-auto items-end justify-start max-w-[1279px] md:pl-10 sm:pl-5 pl-[55px] py-12 w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] justify-start w-[46%] md:w-full">
@@ -231,20 +251,20 @@ const Home1Page = () => {
           <HomeCarousel />
           <div id="Soluções"></div>
 
-       
-            <HomeSolues
-              className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
-              nossassolues="Nossas Soluções"
-              capsulas="Capsulas"
-              pó="Pó"
-              tabletes="Tabletes"
-              líQuidos="Líquidos"
-              softgel="Softgel"
-              barras="Barras"
-              gomas="Gomas"
-              
-            />
-        
+
+          <HomeSolues
+            className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
+            nossassolues="Nossas Soluções"
+            capsulas="Capsulas"
+            pó="Pó"
+            tabletes="Tabletes"
+            líQuidos="Líquidos"
+            softgel="Softgel"
+            barras="Barras"
+            gomas="Gomas"
+
+          />
+
           <HomeEnvases
             className="bg-gray_100 flex flex-col gap-12 sm:h-[900px] items-center justify-center max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
             envases="Envases"
@@ -513,16 +533,16 @@ const Home1Page = () => {
                 FAQ
               </Text>
             </div>
-           
-           
-            {faqProps.map((faq)=>
-               <FaqProvider>
-              <FaqComponent faqProps={faq}/>
+
+
+            {faqProps.map((faq) =>
+              <FaqProvider>
+                <FaqComponent faqProps={faq} />
               </FaqProvider>
-             
-            
+
+
             )}
-             
+
 
             {/* <div id="FAQ"  >
               <Faq data={data} styles={styles} />
