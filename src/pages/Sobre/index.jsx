@@ -34,7 +34,7 @@ const SobrePage = () => {
           <div className="absolute bg-blue_gray_900 bottom-[0] h-[507px]  inset-x-[0] mx-auto w-full"></div>
           <div className="absolute flex flex-col h-full  inset-[0] items-center justify-center m-auto w-[82%]">
             <div className="h-[535px] sm:top-[20px] relative w-[1046px] md:w-full">
-              <div className="absolute flex flex-col gap-6 h-max inset-y-[0] items-start justify-start left-[0] my-auto py-6 w-auto">
+              <div className="absolute flex flex-col gap-6 h-max inset-y-[0] items-start justify-start my-auto py-6 w-auto">
                 <Img
                   src="images/img_logoprincipallaranja.svg"
                   className="h-[38px]  w-[272px]"

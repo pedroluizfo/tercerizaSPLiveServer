@@ -84,7 +84,7 @@ const Home1Page = () => {
 
   return (
     <>
-      <div className="bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full">
+      <div className="bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full zoom-page">
         <div className="flex flex-col items-center justify-start mt-8 w-auto md:w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-20 h-[784px] md:h-auto items-end justify-start max-w-[1279px] md:pl-10 sm:pl-5 pl-[55px] py-12 w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] justify-start w-[46%] md:w-full">

@@ -31,7 +31,7 @@ const ContatoPage = () => {
       <>
     {!mobile ? <>
   
-          <div className="bg-white_A700 flex flex-col font-arboria items-center justify-end mx-auto pt-[76px] w-full">
+          <div className="bg-white_A700 flex flex-col font-arboria items-center justify-end mx-auto pt-[76px] w-full zoom-dois">
             <div className="md:h-[674px] h-[754px] pl-[55px] md:px-5 relative md:right-[100px] w-[1280px] md:w-[39%] sm:w-full">
               <ContatoForm
                 className="absolute bg-white_A700 flex flex-col gap-4 items-center justify-start md:left-[200px] left-[4%] sm:p-6 sm:px-0 md:relative sm:right-[] md:right-[] top-[2%] sm:top-[] md:top-[] w-[500px] sm:w-full"
