@@ -1,43 +1,47 @@
 import React, { useEffect, useState } from "react";
-
 import {
   Button,
   Img,
-  Line,
   Text,
 } from "components";
-import { FaqProvider } from "context/FaqContext";
 import HomeEnvases from "components/HomeEnvases";
-import HomeFooter1280px from "components/HomeFooter1280px";
 import HomeSolues from "components/HomeSolues";
-import "../../styles/font.css"
 import HomeCarousel from "components/HomeCarousel/HomeCarousel";
 import ClientsCarousel from "components/ClientsCarousel/ClientsCarousel";
 import FaqComponent from "components/FAQ/faqComponent";
 import faqData from "./faqData";
+import { FaqProvider } from "context/FaqContext";
+import HomeFooter1280px from "components/HomeFooter1280px";
 
 const Home1Page = () => {
-  const [mobile, setMobile] = useState(false)
-  const [mainClassName,setClassName] = useState('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
+  const [mobile, setMobile] = useState(false);
+  const [mainClassName, setClassName] = useState(
+    "bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full"
+  );
+
+
   const handleResize = () => {
     setMobile(window.innerWidth < 800);
-    if(mobile){
-      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full')
-    }else{
-      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
-    }
   };
-
 
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
 
+    if (mobile) {
+      setClassName(
+        "bg-blue_gray_900 flex flex-col font-arboria items-center zoom-default justify-end mw-full"
+      );
+    } else {
+      setClassName(
+        "bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full"
+      );
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-
+  }, [mobile]);
 
   return (
     <>
@@ -46,7 +50,7 @@ const Home1Page = () => {
           <div className="flex md:flex-col flex-row md:gap-10 gap-20 h-[784px] md:h-auto items-end justify-start max-w-[1279px] md:pl-10 sm:pl-5 pl-[55px] py-12 w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] justify-start w-[46%] md:w-full">
               <div className="flex flex-col gap-10 items-start justify-start w-auto sm:w-full">
-                <div className="flex flex-col md:gap-10 gap-20 items-start justify-start w-auto sm:w-full">
+                <div className="flex flex-col md:gap-10 gap-20 sm:justify-center items-start justify-start w-auto sm:w-full">
                   <Img
                     src="images/img_logoprincipallaranja.svg"
                     className="h-10 w-[262px]"
@@ -66,7 +70,7 @@ const Home1Page = () => {
                 </div>
                 <a href="/contato">
                   <Button
-                    className="cursor-pointer flex items-center justify-center sm:w-[120px] min-w-[308px]"
+                    className="cursor-pointer flex items-center justify-center sm:w-[130px] min-w-[308px]"
                     rightIcon={
                       <Img
                         src="images/img_arrowright.svg"
@@ -161,7 +165,7 @@ const Home1Page = () => {
                     Sobre nós
                   </Text>
                 </div>
-                <div className="flex flex-wrap items-center gap-2 mt-20 sm:relative sm:top-[15px] w-auto">
+                <div className="flex flex-wrap items-center gap-2 mt-20 sm:relative sm:top-[70px] w-auto">
                   <a href="/sobre">
                     <Button
                       className="text-cyan_A400 tracking-[4.00px] w-auto"
