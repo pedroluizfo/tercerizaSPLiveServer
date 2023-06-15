@@ -1,28 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Img, PagerIndicator, Slider, Text } from "components";
-import parceiro1 from "../../assets/images/parceiro1.png";
-import parceiro2 from "../../assets/images/parceiro2.png";
-import parceiro3 from "../../assets/images/parceiro3.png";
-import parceiro4 from "../../assets/images/parceiro4.png";
-import parceiro5 from "../../assets/images/parceiro5.png";
-import parceiro6 from "../../assets/images/parceiro6.png";
-import parceiro7 from "../../assets/images/parceiro7.png";
-import parceiro8 from "../../assets/images/parceiro8.png";
-import parceiro9 from "../../assets/images/parceiro9.png";
-import parceiro10 from "../../assets/images/parceiro10.png";
-import parceiro11 from "../../assets/images/parceiro11.png";
-import parceiro12 from "../../assets/images/parceiro12.png";
-import parceiro13 from "../../assets/images/parceiro13.png";
-import parceiro14 from "../../assets/images/parceiro14.png";
-import parceiro15 from "../../assets/images/parceiro15.png";
-import parceiro16 from "../../assets/images/parceiro16.png";
+import parceiro1 from "../../assets/images/parceiro1.svg";
+import parceiro2 from "../../assets/images/parceiro2.svg";
+import parceiro3 from "../../assets/images/parceiro3.svg";
+import parceiro4 from "../../assets/images/parceiro4.svg";
+import parceiro5 from "../../assets/images/parceiro5.svg";
+import parceiro6 from "../../assets/images/parceiro6.svg";
+
 
 const ClientsCarousel = () => {
   const clientList = [
-    [parceiro1, parceiro2, parceiro3, parceiro4],
-    [parceiro5, parceiro6, parceiro7, parceiro8],
-    [parceiro9, parceiro10, parceiro11, parceiro12],
-    [parceiro13, parceiro14, parceiro15, parceiro16],
+    [parceiro1, parceiro2, parceiro3],
+    [parceiro4, parceiro5, parceiro6],
   ];
 
   const sliderRef = useRef(null);
@@ -91,16 +80,7 @@ const ClientsCarousel = () => {
         />
       </div>
         
-      <PagerIndicator
-        className="flex gap-2 h-4 items-start justify-start w-28"
-        count={clientList.length}
-        activeCss="inline-block cursor-pointer rounded-[50%] h-4 border-yellow_700 border border-solid bg-yellow_700 w-4"
-        activeIndex={sliderState}
-        inactiveCss="inline-block cursor-pointer rounded-[50%] h-4 border-yellow_700 border border-solid w-4"
-        sliderRef={sliderRef}
-        selectedWrapperCss="inline-block"
-        unselectedWrapperCss="inline-block"
-      />
+      
       
     </>
   );

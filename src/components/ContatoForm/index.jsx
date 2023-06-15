@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Img, Input, Text, TextArea } from "components";
+import { Button, Img, Text } from "components";
 import "../../styles/font.css";
 import * as yup from "yup";
 import { mask } from 'remask';
@@ -111,7 +111,7 @@ const ContatoForm = (props) => {
                   onChange={e => {
                     values.phone = mask(e.target.value, "(99) 99999-9999");
                     setNumber(mask(e.target.value, "(99) 99999-9999"));
-                    if(values.phone.length == 15){
+                    if(values.phone.length === 15){
                       values.isPhone = true;
                       
                     }else{
@@ -119,8 +119,8 @@ const ContatoForm = (props) => {
                     }
                    
                   }}
-                  error={!!touched.phone && !!errors.phone || !!touched.isPhone && !!errors.isPhone }
-                  helperText={touched.phone && errors.phone || touched.isPhone && errors.isPhone }
+                  error={(!!touched.phone && !!errors.phone) || (!!touched.isPhone && !!errors.isPhone) }
+                  helperText={(touched.phone && errors.phone) || (touched.isPhone && errors.isPhone) }
                   
                 />
     

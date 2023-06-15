@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-
 import { Img, Text } from "components";
-
 import "../../styles/font.css"
 import { useFaqData } from "context/FaqContext";
 
 const HomeColumnfour = (props) => {
-  const {faqData, setFaqData} = useFaqData()
+  const {setFaqData} = useFaqData()
 
 
   const handleFaqData  = ()=>{

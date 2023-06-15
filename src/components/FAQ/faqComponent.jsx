@@ -4,7 +4,6 @@ import {
     Text,
 } from "components";
 import HomeColumnfour from "components/HomeColumnfour";
-import React, { useState } from "react";
 import { useFaqData } from "../../context/FaqContext";
 
 const FaqComponent = ({ faqProps }) => {

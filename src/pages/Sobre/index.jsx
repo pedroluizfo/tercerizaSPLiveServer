@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { Img, List, Text } from "components";
 import HomeFooter1280px from "components/HomeFooter1280px";
-
-
 import "../../styles/font.css"
 
 

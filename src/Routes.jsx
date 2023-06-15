@@ -14,6 +14,7 @@ const ProjectRoutes = () => {
       <Router>
       <Navbar routes={rotas} markIconColor={"black"}/>
         <Routes>
+        
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/sobre" element={<Sobre />} />

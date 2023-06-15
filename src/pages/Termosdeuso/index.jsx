@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Button, Img, List, Text } from "components";
-
 import "../../styles/font.css"
 
 const TermosdeusoPage = () => {

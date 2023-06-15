@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Img } from "components";
 import ContatoForm from "components/ContatoForm";
 import Footer1280Px from "components/Footer1280Px/Footer1280Px";
