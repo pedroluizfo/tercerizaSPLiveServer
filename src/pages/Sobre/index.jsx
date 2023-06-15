@@ -9,7 +9,6 @@ import "../../styles/font.css"
 
 const SobrePage = () => {
   const [mobile, setMobile] = useState(false)
-  console.log(mobile)
   const handleResize = () => {
     setMobile(window.innerWidth < 800);
     
@@ -31,10 +30,10 @@ const SobrePage = () => {
 
       <div className="bg-white_A700 flex flex-col font-arboria gap-8 items-center justify-end mx-auto pt-[71px] w-full">
         <div className="sm:absolute h-[535px]  md:px-5  relative sm:top-[0px] sm:w-[] w-full">
-          <div className="absolute bg-blue_gray_900 bottom-[0] h-[507px]  inset-x-[0] mx-auto w-full"></div>
+          <div className="absolute bg-blue_gray_900 bottom-[0] h-[535px]  inset-x-[0] mx-auto w-full"></div>
           <div className="absolute flex flex-col h-full  inset-[0] items-center justify-center m-auto w-[82%]">
             <div className="h-[535px] sm:top-[20px] relative w-[1046px] md:w-full">
-              <div className="absolute flex flex-col gap-6 h-max inset-y-[0] items-start justify-start my-auto py-6 w-auto">
+              <div className="absolute flex flex-col gap-6 h-max inset-y-[0] items-start justify-start left-[0] my-auto py-6 w-auto">
                 <Img
                   src="images/img_logoprincipallaranja.svg"
                   className="h-[38px]  w-[272px]"
@@ -48,8 +47,8 @@ const SobrePage = () => {
                   >
                     A expertise da industria.
                   </Text>
-                  <div className="font-inter h-[60px] relative right-[100px] sm:ml-9 w-full">
-                    <div className="absolute bg-deep_orange_A400 h-[60px] sm:mt-[1px] inset-y-[0] sm:left-[20%] my-auto right-[0] sm:w-[100%] sm:h-[140%] w-[90%]">
+                  <div className="font-inter h-[60px] sm:justify-start relative right-[60px] sm:ml-9 w-full">
+                    <div className="absolute bg-deep_orange_A400 h-[60px] sm:mt-[1px] inset-y-[0] sm:left-[6%] my-auto right-[0] sm:w-[100%] sm:h-[140%] w-[90%]">
                     <span className="md:text-[35px] sm:text-[35px] text-white_A700_02 text-[35px] font-arboria text-left">
                         Na agilidade de uma startup.
                       </span>
@@ -164,20 +163,22 @@ const SobrePage = () => {
             />
             <div className="flex flex-col gap-[31px] h-full justify-start sm:m-[] md:z-10 ml-[125px] sm:ml-px mt-[22px] md:relative w-[47%]">
              
-              <div className="absolute md:bottom-px flex flex-col items-center sm:top-[150px] justify-start md:left-[-20px] mr-[69px] md:top-[65px] w-[89%] md:w-full">
+              <div  style={{zIndex:1}} className="absolute md:bottom-px flex flex-col items-center sm:top-[150px] justify-start md:left-[-20px] mr-[69px] md:top-[65px] w-[89%] md:w-full">
                 
                 <List
-                  className="absolute md:bottom-px flex-col sm:gap-5 grid items-center md:left-px top-[0px] md:top-[65px] w-full"
+                  className="absolute md:bottom-px flex-col sm:gap-5 grid items-center md:-ml-8 md:top-[65px] w-full"
                   orientation="vertical"
                 >
-                  <div className="flex flex-col md:ml-5 gap-4 items-start justify-start w-full">
-                  <div className="flex flex-col items-start justify-start w-full">
+                  <div className="flex flex-col ml-6 md:ml-5 gap-4 items-start justify-start w-full">
+                  <div className="flex flex-col items-start  justify-start w-full">
                         <Text
                           className="font-bold text-deep_orange_A400 w-full"
                           as="h5"
                           variant="h5"
                         >
-                        Valores:
+                          <div className="mb-10 md:mb-0 md:mt-8 ">
+                             Valores:
+                          </div>
                         </Text>
                       </div>
                   </div>
@@ -255,7 +256,7 @@ const SobrePage = () => {
             </div>
             <div
               className="absolute bg-cover bg-no-repeat flex flex-col h-full  sm:hidden inset-[0] items-end justify-center m-auto p-[98px] md:px-10 sm:px-5 w-full"
-              style={{ backgroundImage: "url('images/img_group71.png')" }}
+              style={{backgroundImage: "url('images/img_group71.png')" }}
             >
               <Img
                 src="images/img_capsulagel1.png"

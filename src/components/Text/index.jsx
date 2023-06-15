@@ -2,7 +2,6 @@ import React from "react";
 
 import "../../styles/font.css"
 
-
 const variantClasses = {
   h1: "font-normal sm:text-5xl md:text-5xl text-[80px]",
   h2: "font-normal sm:text-5xl md:text-5xl text-6xl",

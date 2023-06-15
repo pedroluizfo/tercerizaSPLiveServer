@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Button,
@@ -6,7 +6,6 @@ import {
   Line,
   Text,
 } from "components";
-import HomeColumnfour from "components/HomeColumnfour";
 import { FaqProvider } from "context/FaqContext";
 import HomeEnvases from "components/HomeEnvases";
 import HomeFooter1280px from "components/HomeFooter1280px";
@@ -22,69 +21,51 @@ const faqProps = [
   {
     title: "Quem faz o regulatório dos produtos?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
+  },
+  {
     title: "Preciso me preocupar com marca/patente?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
+  },
+  {
     title: "Como posso me certificar que meu produto tem os melhores ingredientes?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-    },
-    {
-      title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
-      description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-      },
-      {
-        title: "A Terceiriza faz a logística de entrega do produto?",
-        description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-        }
+  },
+  {
+    title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+  },
+  {
+    title: "A Terceiriza faz a logística de entrega do produto?",
+    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
+  }
 ]
 
 const Home1Page = () => {
-
-
-  const scroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const [mobile, setMobile] = useState(false)
+  const [mainClassName,setClassName] = useState('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
+  const handleResize = () => {
+    setMobile(window.innerWidth < 800);
+    if(mobile){
+      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full')
+    }else{
+      setClassName('bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full')
     }
-
-  }
-  const styles = {
-    // Custom styles for the FAQ component
-    // You can adjust these values according to your requirements
-    bgColor: 'blue', // Set the background color
-    // titleTextColor: 'white', // Set the font color for the question titles
-    // rowContentColor: 'black', // Set the font color for the answer content
-    // rowTitleColor: 'white', // Set the background color for the question titles
-    // arrowColor: 'white', // Set the color of the expand/collapse arrows
-    // width: '100%', // Set the width to full width
-    // /* Frame 30 */
-
-
-    /* Auto layout */
-
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: "0px",
-    gap: "16px",
-
-    width: "10000px",
-    height: "782px",
-
-    color: "white",
-    /* Inside auto layout */
-
-    flex: "none",
-    order: "1",
-    flexGrow: "0",
   };
+
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <>
-      <div className="bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto mw-full zoom-page">
+      <div className={mainClassName}>
         <div className="flex flex-col items-center justify-start mt-8 w-auto md:w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-20 h-[784px] md:h-auto items-end justify-start max-w-[1279px] md:pl-10 sm:pl-5 pl-[55px] py-12 w-full">
             <div className="flex md:flex-1 flex-col gap-[52px] justify-start w-[46%] md:w-full">
@@ -109,7 +90,7 @@ const Home1Page = () => {
                 </div>
                 <a href="/contato">
                   <Button
-                    className="cursor-pointer flex items-center justify-center min-w-[308px]"
+                    className="cursor-pointer flex items-center justify-center sm:w-[120px] min-w-[308px]"
                     rightIcon={
                       <Img
                         src="images/img_arrowright.svg"
@@ -122,7 +103,7 @@ const Home1Page = () => {
                     variant="OutlineCyanA400"
                   >
                     <div className="font-normal text-cyan_A400 text-left text-xl tracking-[4.00px]">
-                      Seja um parceiro
+                      Solicite um orçamento
                     </div>
                   </Button>
                 </a>
@@ -231,20 +212,20 @@ const Home1Page = () => {
           <HomeCarousel />
           <div id="Soluções"></div>
 
-       
-            <HomeSolues
-              className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
-              nossassolues="Nossas Soluções"
-              capsulas="Capsulas"
-              pó="Pó"
-              tabletes="Tabletes"
-              líQuidos="Líquidos"
-              softgel="Softgel"
-              barras="Barras"
-              gomas="Gomas"
-              
-            />
-        
+
+          <HomeSolues
+            className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
+            nossassolues="Nossas Soluções"
+            capsulas="Capsulas"
+            pó="Pó"
+            tabletes="Tabletes"
+            líQuidos="Líquidos"
+            softgel="Softgel"
+            barras="Barras"
+            gomas="Gomas"
+
+          />
+
           <HomeEnvases
             className="bg-gray_100 flex flex-col gap-12 sm:h-[900px] items-center justify-center max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full"
             envases="Envases"
@@ -274,7 +255,7 @@ const Home1Page = () => {
                   </div>
                   <Img
                     src="images/BrunoLadeira.jpg"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
+                    className="absolute h-[279px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
                 </div>
@@ -300,8 +281,8 @@ const Home1Page = () => {
                     <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
                   </div>
                   <Img
-                    src="images/img_rectangle7_259x221.png"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
+                    src="images/LuizHenrique.jpg"
+                    className="absolute h-[279px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
                 </div>
@@ -328,7 +309,7 @@ const Home1Page = () => {
                   </div>
                   <Img
                     src="images/ErickAndrade.jpg"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
+                    className="absolute h-[279px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
                     alt="rectangleseven"
                   />
                 </div>
@@ -344,87 +325,6 @@ const Home1Page = () => {
                     variant="body6"
                   >
                     Engenheiro Químico
-                  </Text>
-                </div>
-              </div>
-              <div className="md:h-[259px] h-[300px] relative w-full">
-                <div className="md:h-[259px] h-[299px] m-auto w-full">
-                  <div className="md:h-[165px] h-[299px] m-auto w-full">
-                    <div className="absolute bg-deep_orange_A400 bottom-[0] h-[164px] left-[0] rounded-[5px] w-[69%]"></div>
-                    <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
-                  </div>
-                  <Img
-                    src="images/img_rectangle7_259x221.png"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
-                    alt="rectangleseven"
-                  />
-                </div>
-                <div className="absolute bg-blue_gray_900_99 bottom-[4%] flex flex-col gap-[3.29px] inset-x-[0] items-start justify-center mx-auto p-[19.71px] rounded-bl-[5px] rounded-br-[5px] w-[221px]">
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[3.16px] w-auto"
-                    variant="body5"
-                  >
-                    Luiz Paulo Parente
-                  </Text>
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
-                    variant="body6"
-                  >
-                    Diretor Financeiro
-                  </Text>
-                </div>
-              </div>
-              <div className="md:h-[259px] h-[300px] relative w-full">
-                <div className="md:h-[259px] h-[299px] m-auto w-full">
-                  <div className="md:h-[165px] h-[299px] m-auto w-full">
-                    <div className="absolute bg-deep_orange_A400 bottom-[0] h-[164px] left-[0] rounded-[5px] w-[69%]"></div>
-                    <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
-                  </div>
-                  <Img
-                    src="images/img_rectangle7_259x221.png"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
-                    alt="rectangleseven"
-                  />
-                </div>
-                <div className="absolute bg-blue_gray_900_99 bottom-[6%] flex flex-col gap-[3.29px] inset-x-[0] items-start justify-center mx-auto p-[19.71px] rounded-bl-[5px] rounded-br-[5px] w-[221px]">
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
-                    variant="body5"
-                  >
-                    Amanda Gomes
-                  </Text>
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
-                    variant="body6"
-                  >
-                    Coordenadora De Marketing
-                  </Text>
-                </div>
-              </div>
-              <div className="md:h-[259px] h-[300px] relative w-full">
-                <div className="md:h-[259px] h-[299px] m-auto w-full">
-                  <div className="md:h-[165px] h-[299px] m-auto w-full">
-                    <div className="absolute bg-deep_orange_A400 bottom-[0] h-[164px] left-[0] rounded-[5px] w-[69%]"></div>
-                    <div className="absolute bg-yellow_700 h-[165px] right-[0] rounded-[5px] top-[0] w-[69%]"></div>
-                  </div>
-                  <Img
-                    src="images/GabrielNaves.jpg"
-                    className="absolute h-[259px] inset-[0] justify-center m-auto object-cover rounded-[5px] w-[85%]"
-                    alt="rectangleseven"
-                  />
-                </div>
-                <div className="absolute bg-blue_gray_900_99 bottom-[6%] flex flex-col gap-[3.29px] inset-x-[0] items-start justify-center mx-auto p-[19.71px] rounded-bl-[5px] rounded-br-[5px] w-[221px]">
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
-                    variant="body5"
-                  >
-                    Gabriel Naves
-                  </Text>
-                  <Text
-                    className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
-                    variant="body6"
-                  >
-                    Analista De Negócios
                   </Text>
                 </div>
               </div>
@@ -447,7 +347,7 @@ const Home1Page = () => {
 
                     <a href="/contato">
                       <Button
-                        className="absolute cursor-pointer flex sm:hidden items-center justify-center left-[15%] min-w-[308px]"
+                        className="absolute cursor-pointer flex sm:hidden items-center justify-center  mt-8 left-[14%] min-w-[290px]"
                         rightIcon={
                           <Img
                             src="images/img_arrowright.svg"
@@ -460,7 +360,7 @@ const Home1Page = () => {
                         variant="OutlineCyanA400"
                       >
                         <div className="font-arboria font-normal sm:hidden text-cyan_A400 text-left text-xl tracking-[4.00px]">
-                          Seja um parceiro
+                        Solicite um orçamento
                         </div>
                       </Button>
                     </a>
@@ -513,16 +413,16 @@ const Home1Page = () => {
                 FAQ
               </Text>
             </div>
-           
-           
-            {faqProps.map((faq)=>
-               <FaqProvider>
-              <FaqComponent faqProps={faq}/>
+
+
+            {faqProps.map((faq) =>
+              <FaqProvider>
+                <FaqComponent faqProps={faq} />
               </FaqProvider>
-             
-            
+
+
             )}
-             
+
 
             {/* <div id="FAQ"  >
               <Faq data={data} styles={styles} />

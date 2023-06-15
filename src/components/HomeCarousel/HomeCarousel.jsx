@@ -66,7 +66,7 @@ const HomeCarousel = () => {
 
   return (
     <>
-      <div className="bg-blue_gray_900 flex flex-col md:gap-10 gap-20 items-center justify-start max-w-[1279px] pb-24 pt-12 md:px-10 sm:px-5 px-[55px] w-full">
+      <div className="bg-blue_gray_900 flex flex-col md:gap-10 gap-20 items-center justify-start max-w-[1180px] pb-24 pt-12 md:px-10 sm:px-5 px-[55px] w-full">
         <div className="flex flex-col gap-2 items-center justify-start w-auto md:w-full">
           <Text
             className="font-arboria font-normal text-center text-yellow_700 tracking-[4.00px] w-auto"
@@ -105,6 +105,7 @@ const HomeCarousel = () => {
                               className="bg-blue_gray_900 border-[3px] border-solid border-yellow_700 flex flex-col gap-4 items-center justify-center p-6 sm:px-5 rounded-[10px] w-full h-full"
                             >
                               <HomeColumnconcepo
+                              
                                 one={index * 3 + i + 1}
                                 concepo={board.concepo}
                                 loremipsumdolor_One={board.loremipsumdolor_One}

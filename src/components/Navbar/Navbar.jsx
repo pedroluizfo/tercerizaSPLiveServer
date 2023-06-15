@@ -19,7 +19,7 @@ const pages = [
   { name: 'Sobre Nós', url: '/sobre' },
   { name: 'Soluções', url: '/' },
   { name: 'FAQ', url: '/' },
-  { name: 'Seja Um Parceiro', url: '/contato' },
+  { name: 'Solicite um orçamento', url: '/contato' },
 ];
 
 function Navbar() {
@@ -55,9 +55,13 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#293335' }}>
+    <AppBar  position="fixed" sx={{ backgroundColor: '#293335' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+   
+          <button onClick={()=>{
+            window.location.href = "/"
+          }}>
           <img
             src={logo}
             style={{
@@ -67,6 +71,7 @@ function Navbar() {
               height: 'auto' // Maintain the aspect ratio by setting height to 'auto'
             }}
           />
+          </button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -104,7 +109,7 @@ function Navbar() {
                     switch (page.name) {
                       case 'Home':
                       case 'Sobre Nós':
-                      case 'Seja Um Parceiro':
+                      case 'Solicite um orçamento':
                         window.location.href = page.url;
                         break;
                       case 'Soluções':
@@ -136,7 +141,7 @@ function Navbar() {
                 onClick={() => handleButtonClick(page.url, page.name)}
                 sx={{
                   my: 2,
-                  color: page.name === 'Seja Um Parceiro' ? '#00F7ED' : '#FFFFFF',
+                  color: page.name === 'Solicite um orçamento' ? '#00F7ED' : '#FFFFFF',
                   display: 'block',
                   fontFamily: 'arboria',
                   ...(index === pages.length - 1 && {
@@ -146,7 +151,7 @@ function Navbar() {
                     alignItems: 'flex-start',
                     padding: '8px 16px',
                     gap: '8px',
-                    width: '184px',
+                    width: '240px',
                     height: '40px',
                     border: '2px solid #00F7ED',
                     borderRadius: '50px',

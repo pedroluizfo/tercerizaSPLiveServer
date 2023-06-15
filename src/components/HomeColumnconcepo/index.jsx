@@ -24,9 +24,9 @@ const HomeColumnconcepo = (props) => {
         </Text>
         <div className="flex flex-col gap-4 items-center justify-start">
           <Text
-            className="font-arboria leading-[27.00px] text-center text-white_A700 w-full"
+            className="font-arborialight leading-[27.00px] text-center text-white_A700 w-full"
             variant="body3"
-            style={{ minHeight: "180px" }} // Adjust the minimum height as needed
+            style={{ minHeight: "180px", fontFamily: "arborialight"}} // Adjust the minimum height as needed
           >
             {props?.loremipsumdolor_One}
           </Text>

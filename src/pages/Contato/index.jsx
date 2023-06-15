@@ -35,13 +35,13 @@ const ContatoPage = () => {
             <div className="md:h-[674px] h-[754px] pl-[55px] md:px-5 relative md:right-[100px] w-[1280px] md:w-[39%] sm:w-full">
               <ContatoForm
                 className="absolute bg-white_A700 flex flex-col gap-4 items-center justify-start md:left-[200px] left-[4%] sm:p-6 sm:px-0 md:relative sm:right-[] md:right-[] top-[2%] sm:top-[] md:top-[] w-[500px] sm:w-full"
-                sejaparceiro="Seja parceiro!"
+                sejaparceiro="Solicite um orçamento!"
                 nome="Nome:"
                 email="E-mail:"
                 telefone="Telefone:"
                 mensagem="Mensagem:"
                 aceitoostermos="Aceito os termos de uso"
-                entre_em_contato="Entre em contato!"
+                entre_em_contato="Solicite um orçamento!"
               />
               <div className="absolute md:h-[590px] h-[754px] sm:hidden inset-y-[0] my-auto right-[0] md:right-[150px] w-[58%] md:w-full">
                 <div className="flex md:flex-col flex-row gap-2 inset-x-[0] items-center justify-start mx-auto md:px-10 sm:px-5 px-[55px] py-6 top-[0] w-auto">
@@ -110,7 +110,7 @@ const ContatoPage = () => {
               justifyContent: 'center',
             }}>
               <ContatoForm
-                sejaparceiro="Seja parceiro!"
+                sejaparceiro="Solicite um orçamento!"
                 nome="Nome:"
                 email="E-mail:"
                 telefone="Telefone:"
