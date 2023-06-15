@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import React, { useEffect, useState } from "react";
 
 import {
   Button,
@@ -24,25 +23,12 @@ const faqProps = [
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
   },
   {
-  },
-  {
     title: "Preciso me preocupar com marca/patente?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
   },
   {
-  },
-  {
     title: "Como posso me certificar que meu produto tem os melhores ingredientes?",
     description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-  },
-  {
-    title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
-    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-  },
-  {
-    title: "A Terceiriza faz a logística de entrega do produto?",
-    description: "Lorem ipsum dolor sit amet consectetur. Adipiscing justo nunc mattis mus turpis urna purus. Eu eget lectus aenean tincidunt vulputate et montes blandit. Proin turpis adipiscing mollis elementum. Sed enim et commodo feugiat magna."
-  }
   },
   {
     title: "Qual é a empresa que fornecerá os ingredientes/formulação do produto?",
@@ -79,7 +65,6 @@ const Home1Page = () => {
 
   return (
     <>
-      <div className={mainClassName}>
       <div className={mainClassName}>
         <div className="flex flex-col items-center justify-start mt-8 w-auto md:w-full">
           <div className="flex md:flex-col flex-row md:gap-10 gap-20 h-[784px] md:h-auto items-end justify-start max-w-[1279px] md:pl-10 sm:pl-5 pl-[55px] py-12 w-full">
@@ -226,20 +211,6 @@ const Home1Page = () => {
 
           <HomeCarousel />
           <div id="Soluções"></div>
-
-
-          <HomeSolues
-            className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
-            nossassolues="Nossas Soluções"
-            capsulas="Capsulas"
-            pó="Pó"
-            tabletes="Tabletes"
-            líQuidos="Líquidos"
-            softgel="Softgel"
-            barras="Barras"
-            gomas="Gomas"
-
-          />
 
 
           <HomeSolues
@@ -442,11 +413,6 @@ const Home1Page = () => {
                 FAQ
               </Text>
             </div>
-
-
-            {faqProps.map((faq) =>
-              <FaqProvider>
-                <FaqComponent faqProps={faq} />
 
 
             {faqProps.map((faq) =>
