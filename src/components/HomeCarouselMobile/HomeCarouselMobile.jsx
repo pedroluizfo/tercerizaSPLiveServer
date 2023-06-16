@@ -150,8 +150,8 @@ const HomeCarousel = () => {
                         />
                     </Button>
                     <PagerIndicator
-                        className="flex mt-5 gap-2 h-4 items-start justify-start w-40"
-                        count={7}
+                        className="flex mt-5 gap-2 h-4 items-start justify-center w-40"
+                        count={boards.length}
                         activeCss="inline-block cursor-pointer rounded-[50%] h-4 border-yellow_700 border border-solid bg-yellow_700 w-4"
                         activeIndex={sliderState}
                         inactiveCss="inline-block cursor-pointer rounded-[50%] h-4 border-yellow_700 border border-solid w-4"
