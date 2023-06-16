@@ -28,7 +28,7 @@ const HomeCarousel = () => {
     },
     {
       concepo: "Produção",
-      loremipsumdolor_One: "O produto entra no fluxo da planta industrial.",
+      loremipsumdolor_One: "O produto é inserido no processo de produção da planta industrial.",
       loremipsumdolor_Three: ""
     },
     {
@@ -77,7 +77,6 @@ const HomeCarousel = () => {
           </Text>
          
         </div>
-
         <div className="flex flex-col gap-6 items-center justify-start max-w-[1140px] mx-auto w-full">
           <Slider
             activeIndex={currentPage}

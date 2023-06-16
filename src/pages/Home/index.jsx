@@ -12,6 +12,7 @@ import FaqComponent from "components/FAQ/faqComponent";
 import faqData from "./faqData";
 import { FaqProvider } from "context/FaqContext";
 import HomeFooter1280px from "components/HomeFooter1280px";
+import HomeCarouselMobile from "components/HomeCarouselMobile/HomeCarouselMobile";
 
 const Home1Page = () => {
   const [mobile, setMobile] = useState(false);
@@ -70,7 +71,7 @@ const Home1Page = () => {
                 </div>
                 <a href="/contato">
                   <Button
-                    className="cursor-pointer flex items-center justify-center sm:w-[130px] min-w-[308px]"
+                    className="cursor-pointer flex items-center justify-center sm:w-[200px] min-w-[380px]"
                     rightIcon={
                       <Img
                         src="images/img_arrowright.svg"
@@ -91,11 +92,11 @@ const Home1Page = () => {
 
               <Img
                 src="images/img_group1.svg"
-                className="h-[120px] md:ml-[0] ml-[132px]"
+                className="h-[120px] sm:hidden md:ml-[0] ml-[132px]"
                 alt="groupone"
               />
             </div>
-            <div className="flex flex-col relative w-1/2 md:w-full">
+            <div className="flex flex-col sm:hidden relative w-1/2 md:w-full">
               <div className="md:h-[623px] h-[647px] mx-auto w-full">
                 <div
                   className="absolute bg-cover bg-no-repeat flex flex-col h-max inset-[0] items-end justify-center m-auto p-4 w-[99%]"
@@ -140,14 +141,14 @@ const Home1Page = () => {
                 <div className="absolute bg-yellow_700 bottom-[4%] h-[34px] right-[0] w-[21%]"></div>
                 <Img
                   src="images/img_group627393.svg"
-                  className="absolute h-[69px] left-[0] top-[4%]"
+                  className="absolute h-[69px]  left-[0] top-[4%]"
                   alt="group627393"
                 />
               </div>
-              <div className="bg-blue_gray_900 flex md:flex-1 mt-5 flex-col gap-6 h-[357px] md:h-auto items-start justify-start sm:px-5 px-8 py-12 rounded-br-[10px] rounded-tr-[10px] w-auto md:w-full">
+              <div className="bg-blue_gray_900 flex md:flex-1 mt-5 sm:mt-10 flex-col gap-6 h-[357px] md:h-auto items-start justify-start sm:px-5 px-8 py-12 rounded-br-[10px] rounded-tr-[10px] w-auto md:w-full">
                 <div className="h-[167px] md:h-[99px] relative w-[542px]  sm:w-full">
 
-                  <div className="absolute bg-blue_gray_900 flex flex-col font-arboria h-max inset-[0] items-center justify-end m-auto w-auto">
+                  <div className="absolute bg-blue_gray_900 flex flex-col font-arboria h-max inset-[0]  items-center justify-end m-auto w-auto">
 
                     <Text
                       className="md:absolute  leading-[33.00px] max-w-[542px] md:max-w-full text-white_A700 md:top-[1%] sm:top-px tracking-[4.00px]"
@@ -165,7 +166,7 @@ const Home1Page = () => {
                     Sobre nós
                   </Text>
                 </div>
-                <div className="flex flex-wrap items-center gap-2 mt-20 sm:relative sm:top-[70px] w-auto">
+                <div className="flex flex-wrap items-center gap-2 mt-20  sm:relative sm:top-[0px] w-auto">
                   <a href="/sobre">
                     <Button
                       className="text-cyan_A400 tracking-[4.00px] w-auto"
@@ -188,13 +189,13 @@ const Home1Page = () => {
 
 
 
-
-          <HomeCarousel />
+          {mobile ?<HomeCarouselMobile /> : <HomeCarousel />}          
+          
           <div id="Soluções"></div>
 
 
           <HomeSolues
-            className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-5 px-[55px] py-12 w-full mr-50px"
+            className="bg-white_A700 mt-10 flex flex-col gap-12 items-center justify-start max-w-[1279px] md:px-10 sm:px-6 px-[55px] py-12 w-full mr-50px"
             nossassolues="Nossas Soluções"
             capsulas="Capsulas"
             pó="Pó"
