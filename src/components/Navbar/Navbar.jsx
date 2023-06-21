@@ -13,7 +13,6 @@ import logo from "../../assets/images/img_logoreduzida.svg";
 
 import "../../styles/font.css";
 
-
 const pages = [
   { name: 'Home', url: '/' },
   { name: 'Sobre Nós', url: '/sobre' },
@@ -55,22 +54,23 @@ function Navbar() {
   };
 
   return (
-    <AppBar  position="fixed" sx={{ backgroundColor: '#293335' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#293335' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-   
-          <button onClick={()=>{
-            window.location.href = "/"
-          }}>
-          <img
-            src={logo}
-            style={{
-              display: 'flex',
-              marginRight: '1rem',
-              width: '50px', // Adjust the width as per your requirement
-              height: 'auto' // Maintain the aspect ratio by setting height to 'auto'
+          <button
+            onClick={() => {
+              window.location.href = "/";
             }}
-          />
+          >
+            <img
+              src={logo}
+              style={{
+                display: 'flex',
+                marginRight: '1rem',
+                width: '50px', // Adjust the width as per your requirement
+                height: 'auto', // Maintain the aspect ratio by setting height to 'auto'
+              }}
+            />
           </button>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -159,6 +159,9 @@ function Navbar() {
                     order: 5,
                     flexGrow: 0,
                   }),
+                  '&:hover': {
+                    color: '#00F7ED',
+                  },
                 }}
               >
                 {page.name}

@@ -20,6 +20,12 @@ const Home1Page = () => {
     "bg-blue_gray_900 flex flex-col font-arboria items-center justify-end mx-auto zoom-page mw-full"
   );
 
+  const styles = {
+    titleTextSize:"20px",
+    rowTitleTextSize:"medium",
+    
+
+}
 
   const handleResize = () => {
     setMobile(window.innerWidth < 800);
@@ -217,7 +223,7 @@ const Home1Page = () => {
 
           <ClientsCarousel />
 
-          <div className="flex flex-col gap-12 items-center justify-start max-w-[1279px] pb-24 pt-12 md:px-10 sm:px-5 px-[55px] w-full">
+          <div className="flex flex-col gap-12 items-center justify-start max-w-[1279px] pb-24 pt-5 md:px-10 sm:px-5 px-[55px] w-full">
             <div className="flex flex-col items-start justify-start w-auto">
               <Text
                 className="font-normal text-yellow_700 tracking-[4.00px] w-auto"
@@ -251,7 +257,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    CEO
+                   Diretor Executivo
                   </Text>
                 </div>
               </div>
@@ -278,7 +284,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body6"
                   >
-                    CEO
+                    Diretor de Operações
                   </Text>
                 </div>
               </div>
@@ -396,9 +402,13 @@ const Home1Page = () => {
             </div>
 
 
-            {faqData.map((faq) =>
+
+          </div>
+
+          
+          {faqData.map((faq) =>
               <FaqProvider>
-                <FaqComponent faqProps={faq} />
+                <FaqComponent faqProps={faq} styles={styles}/>
               </FaqProvider>
 
 
@@ -408,9 +418,7 @@ const Home1Page = () => {
             {/* <div id="FAQ"  >
               <Faq data={data} styles={styles} />
             </div> */}
-
-          </div>
-          <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full" />
+          <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full mt-10" />
         </div>
       </div>
     </>

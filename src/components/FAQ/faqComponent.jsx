@@ -6,6 +6,7 @@ import {
 import HomeColumnfour from "components/HomeColumnfour";
 import { useFaqData } from "../../context/FaqContext";
 
+
 const FaqComponent = ({ faqProps }) => {
     const { faqData, setFaqData } = useFaqData();
    
@@ -14,10 +15,10 @@ const FaqComponent = ({ faqProps }) => {
     };
 
     return (
-        <div className="flex flex-col font-arboria gap-0 items-center justify-start max-w-[1170px] mx-auto w-full">
+        <div className="flex flex-col font-arboria gap-0 items-center justify-start max-w-[auto] mx-auto w-full">
             {faqData ? (
                 <>
-                    <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[52%]" />
+                    <Line className="bg-yellow_700_3f h-0.5 rotate-[-180deg] w-[100%]" />
                     <HomeColumnfour
                         className="bg-blue_gray_900 flex flex-col gap-0 items-start justify-start max-w-[1170px] w-full"
                         comopossomecert={faqProps.title}

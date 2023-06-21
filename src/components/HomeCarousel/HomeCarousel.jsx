@@ -28,7 +28,7 @@ const HomeCarousel = () => {
     },
     {
       concepo: "Produção",
-      loremipsumdolor_One: "O produto é inserido no processo de produção da planta industrial.",
+      loremipsumdolor_One: "Após os testes, encontramos o melhor parceiro e o produto entra no fluxo da planta industrial.",
       loremipsumdolor_Three: ""
     },
     {

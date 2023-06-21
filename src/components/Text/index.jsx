@@ -15,6 +15,8 @@ const variantClasses = {
   body4: "font-normal text-base",
   body5: "font-normal text-sm",
   body6: "font-normal text-xs",
+  body7: "font-apply text-lg"
+  
 };
 
 const Text = ({ children, className = "", variant, as, ...restProps }) => {

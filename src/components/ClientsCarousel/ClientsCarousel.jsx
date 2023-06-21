@@ -10,8 +10,8 @@ import parceiro6 from "../../assets/images/parceiro6.svg";
 
 const ClientsCarousel = () => {
   const clientList = [
-    [parceiro1, parceiro2, parceiro3],
-    [parceiro4, parceiro5, parceiro6],
+    [parceiro1, parceiro6, parceiro3],
+    [parceiro4, parceiro5, parceiro2],
   ];
 
   const sliderRef = useRef(null);

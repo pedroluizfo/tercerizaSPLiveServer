@@ -53,7 +53,7 @@ const HomeCarousel = () => {
 
     const handleSliderStateFoward = () => {
         let position = sliderState + 1;
-        if (position > 6) {
+        if (position > 5) {
             position = 0;
         }
         setsliderState(position);
@@ -64,7 +64,7 @@ const HomeCarousel = () => {
     const handleSliderStateBackward = () => {
         let position = sliderState - 1;
         if (position < 0) {
-            position = 6;
+            position = 5;
         }
         setsliderState(position);
         sliderRef.current.slideTo(position);

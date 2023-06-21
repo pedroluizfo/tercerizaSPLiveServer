@@ -23,8 +23,7 @@ const HomeSolues = (props) => {
           className="font-arboria -my-8  text-center text-blue_gray_900 w-auto "
           variant="body3"
         >
-          Utilizamos ingredientes nacionais e importados,
-          com embalagens inovadoras e diversos tipos de finalização.
+          Oferecemos qualidade superior em cada produto que criamos, utilizando ingredientes nacionais e importados
         </Text>
         </div>
         </div>

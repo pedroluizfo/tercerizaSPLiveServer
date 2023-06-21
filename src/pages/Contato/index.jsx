@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Img } from "components";
 import ContatoForm from "components/ContatoForm";
-import Footer1280Px from "components/Footer1280Px/Footer1280Px";
 import "../../styles/font.css"
 import HomeFooter1280px from "components/HomeFooter1280px";
 
@@ -85,7 +84,9 @@ const ContatoPage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-10"><Footer1280Px/></div>
+          <div className="flex flex-row justify-center w-[full] bg-blue_gray_900">
+            <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start justify-between max-w-[1279px] sm:px-5 px-6 py-4 w-full"/>
+            </div>
           
 
         </>

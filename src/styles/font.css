@@ -23,14 +23,16 @@
     font-style: normal;
   }
 
-
+  .font-apply {
+    font-family: 'arborialight', Arial, sans-serif;
+  }
 
 
   .zoom-page {
     zoom: 120%; 
   }
   .zoom-default {
-    zoom: 80%; 
+    zoom: 90%; 
   }
 
 

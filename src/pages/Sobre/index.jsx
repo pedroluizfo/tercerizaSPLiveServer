@@ -25,7 +25,7 @@ const SobrePage = () => {
   return (
     <>
 
-      <div className="bg-white_A700 flex flex-col font-arboria gap-8 items-center justify-end mx-auto pt-[71px] w-full">
+      <div className="bg-white_A700 flex flex-col gap-8 items-center justify-end mx-auto pt-[71px] w-full">
         <div className="sm:absolute h-[535px]  md:px-5  relative sm:top-[0px] sm:w-[] w-full">
           <div className="absolute bg-blue_gray_900 bottom-[0] h-[535px]  inset-x-[0] mx-auto w-full"></div>
           <div className="absolute flex flex-col h-full  inset-[0] items-center justify-center m-auto w-[82%]">
@@ -64,7 +64,7 @@ const SobrePage = () => {
                    className="leading-[33.00px] text-gray_100 relative z-10" 
                    variant="body1"
                 >
-                  <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-normal">
+                  <span className="md:text-xl sm:text-lg text-gray_100 text-[22px] font-arboria text-left font-apply">
                     A Terceiriza tem vasto conhecimento do ecossistema <br /> 
                     da indústria em todos os seus segmentos e conta com um <br />
                     time exemplar para auxiliar a sua empresa desde a <br />
@@ -102,15 +102,17 @@ const SobrePage = () => {
               <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto">
                 <div className="sm:absolute bg-blue_gray_900 border-[3px] sm:h-[145px] md:h-[170px] border-solid border-white_A700 sm:bottom-[] flex flex-col gap-4 sm:h-[120px] h-[241px] md:h-auto items-center justify-start p-6 sm:px-5 rounded-[10px] w-full">
                   <Text
-                    className="font-bold text-center text-cyan_A400 sm:text-xl tracking-[4.00px] w-full"
+                    className="text-center text-cyan_A400 sm:text-xl tracking-[4.00px] w-full"
                     as="h5"
                     variant="h5"
                   >
                     Propósito
                   </Text>
                   <Text
+                    
                     className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
-                    variant="body3"
+                    variant="body7"
+                  
                   >
                     Levar inovação e sustentabilidade à indústria de saúde e
                     bem-estar brasileira.
@@ -126,7 +128,7 @@ const SobrePage = () => {
                   </Text>
                   <Text
                     className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
-                    variant="body3"
+                    variant="body7"
                   >
                     Ser líder no desenvolvimento de soluções em saúde e
                     bem-estar, integrado a ciência e a tecnologia às tendências
@@ -143,7 +145,7 @@ const SobrePage = () => {
                   </Text>
                   <Text
                     className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
-                    variant="body3"
+                    variant="body7"
                   >
                     Apoiar o desenvolvimento de produtos de saúde e bem-estar,
                     com foco em inovação e sustentabilidade.
@@ -193,7 +195,7 @@ const SobrePage = () => {
                         </Text>
                       </div>
                       <Text
-                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                        className="leading-[27.00px]  font-apply max-w-[482px] md:max-w-full text-blue_gray_900"
                         variant="body3"
                       >
                         Nossas soluções buscam preservar os recursos naturais e
@@ -216,7 +218,7 @@ const SobrePage = () => {
                         </Text>
                       </div>
                       <Text
-                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900"
+                        className="leading-[27.00px] font-apply max-w-[482px] md:max-w-full text-blue_gray_900"
                         variant="body3"
                       >
                         Na Terceriza, a agilidade é parte integrante de nossa
@@ -238,7 +240,7 @@ const SobrePage = () => {
                         </Text>
                       </div>
                       <Text
-                        className="leading-[27.00px] max-w-[482px] md:max-w-full text-blue_gray_900 sm:w-[180%]"
+                        className="leading-[27.00px] font-apply max-w-[482px] md:max-w-full text-blue_gray_900 sm:w-[180%]"
                         variant="body3"
                       >
                         A Terceriza se compromete a inspirar e motivar mudanças
