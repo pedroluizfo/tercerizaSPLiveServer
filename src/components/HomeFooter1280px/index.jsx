@@ -28,7 +28,7 @@ const HomeFooter1280px = (props) => {
 
         <div className="flex h-6 flex-row justify-center w-auto sm:hidden md:hidden">
         <Text
-        style={{ fontSize:"14px",position:"absolute"}}
+        style={{ fontSize:"12px",position:"absolute"}}
         className="font-arboria  text-white_A700 tracking-[3.00px]"
         >
           Alameda Rio Negro, 503 23o andar - CJ. 2301 – Alphaville. <br></br>contato@terceirizasp.com.br

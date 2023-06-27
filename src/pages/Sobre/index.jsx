@@ -25,7 +25,7 @@ const SobrePage = () => {
   return (
     <>
 
-      <div className="bg-white_A700 flex flex-col gap-8 items-center justify-end mx-auto pt-[71px] w-full">
+      <div className="bg-white_A700 flex flex-col gap-8 items-center justify-end mx-auto pt-[71px] w-full ">
         <div className="sm:absolute h-[535px]  md:px-5  relative sm:top-[0px] sm:w-[] w-full">
           <div className="absolute bg-blue_gray_900 bottom-[0] h-[535px]  inset-x-[0] mx-auto w-full"></div>
           <div className="absolute flex flex-col h-full  inset-[0] items-center justify-center m-auto w-[82%]">

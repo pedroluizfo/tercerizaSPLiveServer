@@ -23,8 +23,8 @@ const Home1Page = () => {
   const styles = {
     titleTextSize:"20px",
     rowTitleTextSize:"medium",
+    fontFamily: "arborialight"
     
-
 }
 
   const handleResize = () => {
@@ -305,7 +305,7 @@ const Home1Page = () => {
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
                     variant="body5"
                   >
-                    Erik Andrade
+                    Erick Andrade
                   </Text>
                   <Text
                     className="font-arboria text-white_A700_02 tracking-[2.59px] w-auto"
@@ -393,9 +393,10 @@ const Home1Page = () => {
 
             <div className="flex flex-col items-start justify-start w-auto">
               <Text
-                className="font-normal text-yellow_700 tracking-[4.00px] w-auto"
+                className="font-arboria text-yellow_700 tracking-[4.00px] w-auto"
                 as="h3"
                 variant="h3"
+               
               >
                 FAQ
               </Text>
