@@ -176,7 +176,7 @@ const SobrePage = () => {
                           variant="h5"
                         >
                           <div className="mb-10 md:mb-0 md:mt-8 ">
-                             Valores:
+                             Valores
                           </div>
                         </Text>
                       </div>
