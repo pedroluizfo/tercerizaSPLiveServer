@@ -25,7 +25,7 @@ const SobrePage = () => {
   return (
     <>
 
-      <div className="bg-white_A700 flex flex-col gap-8 items-center justify-end mx-auto pt-[71px] w-full ">
+      <div className="bg-white_A700 flex flex-col gap-8 items-center justify-end mx-auto pt-[71px] w-full sm:h-[2300px]">
         <div className="sm:absolute h-[535px]  md:px-5  relative sm:top-[0px] sm:w-[] w-full">
           <div className="absolute bg-blue_gray_900 bottom-[0] h-[535px]  inset-x-[0] mx-auto w-full"></div>
           <div className="absolute flex flex-col h-full  inset-[0] items-center justify-center m-auto w-[82%]">
@@ -96,7 +96,7 @@ const SobrePage = () => {
             </div>
           </div>
         </div>
-        <div className="sm:flex md:h-[1053px] h-[1152px] sm:h-[] sm:p-[] sm:pt-[] md:px-5 relative sm:top-[630px] w-full">
+        <div className="sm:flex md:h-[1053px] h-[1152px] sm:h-[] sm:p-[] sm:pt-[] md:px-5 relative sm:top-[680px] w-full">
           <div className="absolute flex flex-col inset-x-[0] items-center justify-start mx-auto top-[0] w-auto">
             <div className="flex flex-col items-start justify-start max-w-[964px] w-full">
               <div className="gap-8 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 items-start justify-start w-auto">
@@ -110,7 +110,7 @@ const SobrePage = () => {
                   </Text>
                   <Text
                     
-                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-l"
                     variant="body7"
                   
                   >
@@ -127,7 +127,7 @@ const SobrePage = () => {
                     Visão
                   </Text>
                   <Text
-                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-l sm:mt-[-10px]"
                     variant="body7"
                   >
                     Ser líder no desenvolvimento de soluções em saúde e
@@ -144,7 +144,7 @@ const SobrePage = () => {
                     Missão
                   </Text>
                   <Text
-                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-xs"
+                    className="leading-[27.00px] max-w-[252px] md:max-w-full text-center text-white_A700 sm:text-l"
                     variant="body7"
                   >
                     Apoiar o desenvolvimento de produtos de saúde e bem-estar,
@@ -154,13 +154,13 @@ const SobrePage = () => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-[8%] sm:bottom-[] sm:flex md:h-[785px] md:top-[265px] h-[788px] inset-x-[0] mx-auto sm:top-[120px] sm:w-3/5 w-full">
+          <div className="absolute bottom-[8%] sm:bottom-[] sm:flex md:h-[785px] md:top-[265px] h-[788px] inset-x-[0] mx-auto sm:top-[-490px] sm:w-3/5 w-full">
             <Img
               src="images/img_vector.png"
               className="absolute bottom-[9%] h-[594px] md:hidden object-cover right-[0]"
               alt="vector"
             />
-            <div className="flex flex-col gap-[31px] h-full justify-start sm:m-[] md:z-10 ml-[125px] sm:ml-px mt-[22px] md:relative w-[47%]">
+            <div className="flex flex-col gap-[31px] h-full justify-start sm:m-[] md:z-10 ml-[125px] sm:ml-px mt-[22px] md:relative w-[47%] sm:mt-[600px]">
              
               <div  style={{zIndex:1}} className="absolute md:bottom-px flex flex-col items-center sm:top-[150px] justify-start md:left-[-20px] mr-[69px] md:top-[65px] w-[89%] md:w-full">
                 
@@ -254,12 +254,12 @@ const SobrePage = () => {
               </div>
             </div>
             <div
-              className="absolute bg-cover bg-no-repeat flex flex-col h-full  sm:hidden inset-[0] items-end justify-center m-auto p-[98px] md:px-10 sm:px-5 w-full"
+              className="absolute bg-cover bg-no-repeat flex flex-col h-[1000px]  sm:hidden inset-[0] items-end justify-center m-auto p-[98px] md:px-10 sm:px-5 w-full"
               style={{backgroundImage: "url('images/img_group71.png')" }}
             >
               <Img
                 src="images/img_capsulagel1.png"
-                className="h-[589px] md:h-auto md:hidden mr-[25px] object-cover w-[41%]"
+                className="h-[689px] md:h-auto md:hidden mr-[25px] object-cover w-[41%]"
                 alt="capsulagelone"
               />
 
@@ -267,8 +267,9 @@ const SobrePage = () => {
 
           </div>
 
+
         </div>
-        <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start md:mt-20 justify-between max-w-[3079px] sm:px-5 px-6 py-4 w-full sm:hidden" />
+        <HomeFooter1280px className="bg-blue_gray_900 flex-row flex-wrap items-start md:mt-20 justify-between max-w-[3079px] sm:px-5 px-6 py-4 w-full sm:mt-[1800px]" />
 
       </div>
 
